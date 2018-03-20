@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.washinSystems.homepage.HajibootSecurityApplication</config>
+		<config>java:com.washinSystems.homepage.WashinHomePageApplication</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
