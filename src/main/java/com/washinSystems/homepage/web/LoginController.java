@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("maintenance")
 public class LoginController {
-    @GetMapping(path = "loginForm")
+    @GetMapping(path = "loginScreen")
     String loginForm() {
-        return "maintenance/loginForm";
+        return "maintenance/loginScreen";
     }
 }
