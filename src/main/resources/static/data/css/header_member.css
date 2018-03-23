@@ -1,0 +1,285 @@
+@charset "shift_jis";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+article,aside,details,footer,header,hgroup,menu,nav,#section,summary {
+	display: block;
+	margin:0;
+}
+
+
+body{
+	margin:0;
+	background-color:#000;
+	background:url(../img/back_under.jpg) repeat-x;
+	font-family:"ÉqÉâÉMÉmäpÉS Pro W3", "Hiragino Kaku Gothic Pro", "ÉÅÉCÉäÉI", Meiryo, Osaka, "ÇlÇr ÇoÉSÉVÉbÉN", "MS PGothic", sans-serif;
+}
+
+#wrapper{
+    background-color: #FFF;
+    min-height: 1em;
+    display: inline-table;
+	margin:0 auto 0 auto;
+	width:968px;
+	height:300px;
+	position:relative;
+	top:-290px;
+	display: block;
+
+
+}
+h1{
+	margin:0;
+}
+
+.member_c{
+	margin:0;
+	position:relative;
+	top:20px;
+	left:20px;
+}
+.member_c ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.member_c li{
+	float:left;
+	margin:0 7px 0 0;
+	padding:0;
+	width:180px;
+	height:60px;
+	background-color:#5D79BA;
+	color:#FFF;
+	font-weight:bold;
+}
+.member_c li a{
+	margin:0;
+	padding:20px 0 0 0;
+	display:block;
+	text-align:center;
+	width:180px;
+	height:40px;
+	text-decoration:none;
+	color:#FFF;
+	font-size:14px;
+}
+.member_c p{
+	font-size:12px;
+	margin:0 0 20px 0;
+}
+#wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*\*/
+* html #wrapper{
+    height: 1em;
+}
+
+
+/*ÉhÉçÉbÉvÉVÉÉÉhÉECSS
+.drop-shadow {    
+position:relative;    
+width:960px;    
+padding:1em;    
+margin:2em auto 5em;   
+background:#fff;   
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;    
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;    
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+}
+.drop-shadow:before,.drop-shadow:after {    
+content:"";       
+z-index:-2;          
+width:980px;    
+height:100%;} 
+.drop-shadow:after{    
+right:10px;    
+left:auto;
+}
+*/
+/*--------------------------HEADER---------------------------------*/
+
+header {
+	width:1100px;
+	height:500px;
+	clear:both;
+	margin:0 auto;
+	background:url(../img/header_under.jpg) 50%;
+	background-position: center;
+	zoom:1;
+}
+#header {
+	width:1100px;
+	height:500px;
+	clear:both;
+	margin:0 auto;
+	background:url(../img/header_under.jpg) 50%;
+	background-position: center;
+	zoom:1;
+}
+
+#header p {
+	width:750px;
+	height:77px;
+	background:url(../img/logo_ver2.jpg) no-repeat;
+	float:left;
+	margin:30px 0 0 50px;
+	text-indent:-9990px;
+	z-index:0;
+}
+#header p a{
+	width:750px;
+	height:77px;
+	margin:0;
+	display:block;
+	overflow:hidden;
+}
+
+#header ul {
+    margin:0 auto;
+    list-style-type:none;
+	float:right;
+	height:30px;
+}
+#header li {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+	float:left;
+	height:30px;
+}
+
+#header li.h_btn1{
+	margin:0;
+	background:url(../img/member_btn.jpg) no-repeat;
+	width:71px;
+	height:19px;
+	text-indent:-9990px;
+	position:relative;
+	right:80px;
+}
+
+#header li.h_btn1 a{
+	margin:0;
+	width:71px;
+	height:19px;
+	display:block;
+	overflow:hidden;
+}
+
+
+/*--------------------------GROVAL NAVIGATION---------------------------------*/
+
+nav {
+    width:980px;
+	height:108px;
+	margin:0 auto;
+	background:url(../img/navi_back2.png) no-repeat;
+	position:relative;
+	top:-280px;
+
+	
+}
+
+nav ul {
+    margin:0;
+	padding:20px 0 0 75px;
+    list-style-type:none;
+}
+nav li {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+	float:left;
+	text-indent:-9999px;
+}
+
+nav li.nav1 a{
+    margin:0;
+	display:block;
+	width:60px;
+	height:50px;
+	background:url(../img/glonavi_btn1.jpg) no-repeat left top;
+}
+nav li.nav1 a:hover{
+    margin:0;
+	width:60px;
+	height:50px;
+	background:url(../img/glonavi_btn1.jpg) no-repeat left -50px;
+}
+
+
+nav li.nav2 a{
+    margin:0 0 0 67px;
+	display:block;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn2.jpg) no-repeat left top;
+}
+nav li.nav2 a:hover{
+    margin:0 0 0 67px;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn2.jpg) no-repeat left -50px;
+}
+
+nav li.nav3 a{
+    margin:0 0 0 57px;
+	display:block;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn3.jpg) no-repeat left top;
+}
+nav li.nav3 a:hover{
+    margin:0 0 0 57px;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn3.jpg) no-repeat left -50px;
+}
+nav li.nav4 a{
+    margin:0 0 0 47px;
+	display:block;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn4.jpg) no-repeat left top;
+}
+nav li.nav4 a:hover{
+    margin:0 0 0 47px;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn4.jpg) no-repeat left -50px;
+}
+nav li.nav5 a{
+    margin:0 0 0 47px;
+	display:block;
+	width:125px;
+	height:50px;
+	background:url(../img/glonavi_btn5.jpg) no-repeat left top;
+}
+nav li.nav5 a:hover{
+    margin:0 0 0 47px;
+	width:125px;
+	height:50px;
+	background:url(../img/glonavi_btn5.jpg) no-repeat left -50px;
+}
+nav li.nav6 a{
+    margin:0 0 0 47px;
+	display:block;
+	width:115px;
+	height:50px;
+	background:url(../img/glonavi_btn6.jpg) no-repeat left top;
+}
+nav li.nav6 a:hover{
+    margin:0 0 0 47px;
+	width:115px;
+	height:50px;
+	background:url(../img/glonavi_btn6.jpg) no-repeat left -50px;
+}

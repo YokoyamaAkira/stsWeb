@@ -1,0 +1,504 @@
+@charset "utf-8";
+/* CSS Document */
+
+article,aside,details,footer,header,hgroup,menu,nav,section,summary {
+	display: block;
+	margin:0;
+}
+
+
+body{
+	margin:0;
+	background-color:#000;
+	background:url(../img/back.jpg) repeat-x;
+/*	overflow-x:hidden;*/
+}
+#wrapper{
+	margin:0 auto 0 auto;
+	width:980px;
+}
+
+/*--------------------------HEADER---------------------------------*/
+
+header {
+	width:1100px;
+	height:500px;
+	clear:both;
+	margin:0 auto;
+	background:url(../img/header.jpg) 50%;
+	background-position: center;
+
+}
+#header {
+	width:1100px;
+	height:500px;
+	clear:both;
+	margin:0 auto;
+	background:url(../img/header.jpg) 50%;
+	background-position: center;
+
+}
+hgroup{
+	margin:0;
+}
+#header p {
+	width:750px;
+	height:77px;
+	background:url(../img/logo.jpg) no-repeat;
+	float:left;
+	margin:30px 0 0 50px;
+	text-indent:-9990px;
+	z-index:0;
+}
+#header p a{
+	width:750px;
+	height:77px;
+	margin:0;
+	display:block;
+		overflow:hidden;
+}
+
+#header ul {
+    margin:0 auto;
+    list-style-type:none;
+	float:right;
+	height:30px;
+}
+#header li {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+	float:left;
+	height:30px;
+}
+
+#header li.h_btn1{
+	margin:0;
+	background:url(../img/member_btn.jpg) no-repeat;
+	width:71px;
+	height:19px;
+	text-indent:-9990px;
+	position:relative;
+	right:80px;
+}
+
+#header li.h_btn1 a{
+	margin:0;
+	width:71px;
+	height:19px;
+	display:block;
+		overflow:hidden;
+}
+
+/*--------------------------GROVAL NAVIGATION---------------------------------*/
+
+nav {
+    width:980px;
+	height:108px;
+	margin:0 auto;
+}
+#nav {
+    width:980px;
+	height:108px;
+	margin:0 auto;
+	background:url(../img/navi_back.png) no-repeat;
+		background:url(../img/navi_back.png) no-repeat;
+	position:relative;
+	top:-80px;	
+}
+
+#nav ul {
+    margin:0;
+	padding:20px 0 0 75px;
+    list-style-type:none;
+}
+#nav li {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+	float:left;
+	text-indent:-9999px;
+}
+
+#nav li.nav1 a{
+    margin:0;
+	display:block;
+	width:60px;
+	height:50px;
+	background:url(../img/glonavi_btn1.jpg) no-repeat left top;
+		overflow:hidden;
+}
+#nav li.nav1 a:hover{
+    margin:0;
+	width:60px;
+	height:50px;
+	background:url(../img/glonavi_btn1.jpg) no-repeat left -50px;
+}
+
+
+#nav li.nav2 a{
+    margin:0 0 0 67px;
+	display:block;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn2.jpg) no-repeat left top;
+		overflow:hidden;
+}
+#nav li.nav2 a:hover{
+    margin:0 0 0 67px;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn2.jpg) no-repeat left -50px;
+}
+
+#nav li.nav3 a{
+    margin:0 0 0 57px;
+	display:block;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn3.jpg) no-repeat left top;
+		overflow:hidden;
+}
+#nav li.nav3 a:hover{
+    margin:0 0 0 57px;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn3.jpg) no-repeat left -50px;
+}
+#nav li.nav4 a{
+    margin:0 0 0 47px;
+	display:block;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn4.jpg) no-repeat left top;
+		overflow:hidden;
+}
+#nav li.nav4 a:hover{
+    margin:0 0 0 47px;
+	width:90px;
+	height:50px;
+	background:url(../img/glonavi_btn4.jpg) no-repeat left -50px;
+}
+#nav li.nav5 a{
+    margin:0 0 0 47px;
+	display:block;
+	width:125px;
+	height:50px;
+	background:url(../img/glonavi_btn5.jpg) no-repeat left top;
+		overflow:hidden;
+}
+#nav li.nav5 a:hover{
+    margin:0 0 0 47px;
+	width:125px;
+	height:50px;
+	background:url(../img/glonavi_btn5.jpg) no-repeat left -50px;
+}
+#nav li.nav6 a{
+    margin:0 0 0 47px;
+	display:block;
+	width:115px;
+	height:50px;
+	background:url(../img/glonavi_btn6.jpg) no-repeat left top;
+		overflow:hidden;
+}
+#nav li.nav6 a:hover{
+    margin:0 0 0 47px;
+	width:115px;
+	height:50px;
+	background:url(../img/glonavi_btn6.jpg) no-repeat left -50px;
+}
+
+/*--------------------------CONTENTS---------------------------------*/
+
+section {
+    float:left;
+    width:645px;
+    text-align:left;
+    margin:0;
+	padding:0;
+	clear:both;
+}
+#section {
+    float:left;
+    width:645px;
+    text-align:left;
+    margin:-80px 0 0 5px;
+	padding:0;
+	clear:both;
+}
+.info{
+	margin:0;
+	text-indent:-9990px;
+	background:url(../img/info_bar.jpg) no-repeat;
+	width:645px;
+	height:30px;	
+}
+.info h1{
+	margin:0;
+	text-indent:-9990px;
+	height:20px;
+}
+
+p.info_all{
+	background:url(../img/info_all_btn.jpg) no-repeat;
+	width:150px;
+	height:22x;
+	text-indent:-9999px;
+	margin:0;
+	position:relative;
+	top:-15px;
+	left:470px;
+}
+p.info_all a{
+	display:block;
+	width:150px;
+	height:22px;
+	margin:0;
+		overflow:hidden;
+}
+.info_box{
+	margin:0;
+	border:1px solid #EEE;
+	height:100px;
+	width:645px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+.info_box p {
+    margin:5px 0 5px 20px;
+    padding:0;
+    list-style-type:none;
+	height:20px;
+	width:645px;
+	font:12px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	overflow:auto;
+}
+.info_box p a{
+    color:#5271B3;
+	text-decoration:none;
+		overflow:hidden;
+}
+.info_box p a:hover{
+	text-decoration:underline;
+}
+.develop{
+	margin:20px 0 120px 0;
+	background:url(../img/develop_back.jpg) no-repeat;
+	width:645px;
+	height:430px;	
+}
+
+h2{
+	margin:10px 0 0 20px;
+	background:url(../img/develop_title.jpg) no-repeat;
+	width:605px;
+	height:42px;
+	position:relative;
+	top:20px;
+	text-indent:-9990px;
+}
+
+p.develop_all{
+	background:url(../img/develop_all_btn.jpg) no-repeat;
+	width:150px;
+	height:22px;
+	text-indent:-9999px;
+	margin:0;
+	position:relative;
+	top:-10px;
+	left:470px;
+}
+p.develop_all a{
+	width:150px;
+	height:22px;
+	display:block;
+	margin:0;
+		overflow:hidden;
+}
+p.develop_text{
+	font:13px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	position:relative;
+	top:20px;
+	left:20px;
+	width:600px;
+	margin:0 0 10px 0;
+}
+
+.develop_com{
+	background-color:#FFF;
+	width:605px;
+	height:225px;
+	margin:0;
+	position:relative;
+	left:20px;
+	top:30px;
+}
+.develop_com .deve_left{
+	float:left;
+	width:320px;
+	position:relative;
+	top:10px;
+	left:10px;
+}
+.develop_com .deve_right{
+	float:right;
+	width:280px;
+}
+.develop_com .deve_right p.c_title{
+	margin:0;
+	vertical-align:top;
+	position:relative;
+	top:10px;
+	left:10px;
+	font:14px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	width:270px;
+	font-weight:bold;
+}
+.develop_com .deve_right p.c_text{
+	margin:0;
+	vertical-align:top;
+	position:relative;
+	top:30px;
+	left:10px;
+	font:12px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	width:270px;
+	line-height:20px;
+}
+
+/*--------------------------SIDE---------------------------------*/
+
+#aside {
+    float:right;
+    width:290px;
+	margin:0;
+}
+.aside {
+    float:right;
+    width:290px;
+	margin:-75px 5px 0 0;
+}
+
+h4{
+	background:url(../img/flow_btn.jpg) no-repeat;
+	width:290px;
+	height:100px;
+	text-indent:-9999px;
+		margin:0;
+}
+h4 a{
+	margin:0;
+	width:290px;
+	height:100px;
+	display:block;
+		overflow:hidden;
+}
+h5{
+	background:url(../img/recruit_btn.jpg) no-repeat;
+	width:283px;
+	height:65px;
+	text-indent:-9999px;
+	margin:20px 0 0 5px;
+}
+h5 a{
+	margin:0;
+	width:283px;
+	height:65px;
+	display:block;
+		overflow:hidden;
+}
+
+.pagetop{
+		clear:both;
+		margin:0;
+		float:right;
+}
+.pagetop p{
+	margin:0;
+	width:70px;
+	height:60px;
+	background:url(../img/pagetop.jpg) no-repeat;
+			position:relative;
+			top:0;
+			text-indent:-9990px;
+}
+.pagetop p a{
+	margin:0;
+	width:70px;
+	height:60px;
+	display:block;
+		overflow:hidden;
+	
+}
+
+/*--------------------------FOOTER---------------------------------*/
+footer {
+    clear:both !important;
+    border:none;
+    text-align:center;
+	background:url(../img/footback.jpg) repeat-x;
+	width:100%;
+	height:170px;
+	margin:0;
+	position:relative;
+	top:50px;
+}
+#footer {
+    clear:both !important;
+    border:none;
+    text-align:center;
+	background:url(../img/footback.jpg) repeat-x;
+	width:100%;
+	height:170px;
+	margin:0;
+}
+.foot{
+	margin:0 auto;
+	width:980px;
+	height:140px;
+}
+.foot_left{
+	float:left;
+	width:499px;
+	height:81px;
+	margin:0;
+}
+.foot_left p{
+	width:499px;
+	height:81px;
+	background:url(../img/logo2.jpg) no-repeat;
+	text-indent:-9999px;
+	margin:20px 0 0 0;
+}
+.foot_right{
+	float:right;
+	width:283px;
+	height:75px;
+	margin:0;
+}
+.foot_right p{
+	width:283px;
+	height:75px;
+	background:url(../img/privacy_btn.jpg) no-repeat;
+	text-indent:-9999px;
+	margin:20px 0 0 0;	
+}
+.foot_right p a{
+	width:283px;
+	height:75px;
+	display:block;
+	margin:0;
+		overflow:hidden;
+}
+p.copyright{
+	background:url(../img/copyright.jpg) no-repeat;
+	width:980px;
+	height:30px;
+	margin:0 auto 0 auto;
+	text-indent:-9990px;
+}
+
+/* 変更履歴 :2012/09/07 */
+/* 変更者   :横山 */
+/* 変更内容 :bodyタグの[overflow-x:hidden]をコメントアウト */
+/*          :トップページの横スクロールバーを表示させるため */
