@@ -1,0 +1,151 @@
+@CHARSET "UTF-8";
+
+//
+http: //weboook.blog22.fc2.com /blog-entry-359.html
+#dropmenu {
+	list-style-type: none;
+	width: 800px;
+	height: 40px;
+	margin: 30px auto 300px;
+	padding: 0;
+	background: #8a9b0f;
+	border-bottom: 5px solid #535d09;
+	border-radius: 3px 3px 0 0;
+}
+
+#dropmenu li {
+	list-style: none;
+	position: relative;
+	width: 20%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#dropmenu li a { /*メインメニューのスタイルを決めている*/
+	display: block;
+	margin: 0;
+	padding: 15px 0 11px;
+	/*color: #fff;*/
+	color: #C0C0C0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1;
+	text-decoration: none;
+}
+
+#dropmenu li p { /*メインメニューのスタイルを決めている*/
+	display: block;
+	margin: 0;
+	padding: 15px 0 11px;
+	/*color: #fff;*/
+	color: #C0C0C0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1;
+	text-decoration: none;
+}
+
+#dropmenu li:hover>a {
+	background: #6e7c0c;
+	color: #eff7b1;
+}
+
+#dropmenu li:hover>p {
+	background: #6e7c0c;
+	color: #eff7b1;
+}
+
+#dropmenu>li:hover>a {
+	border-radius: 3px 3px 0 0;
+}
+
+#dropmenu>li:hover>p {
+	border-radius: 3px 3px 0 0;
+}
+
+#dropmenu li ul {
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	border-radius: 0 0 3px 3px;
+}
+
+/* #dropmenu li:last-child ul { */
+/* 	left: -100%; */
+/* 	width: 100% */
+/* } */
+
+#dropmenu li ul li {
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	color: #fff;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	transition: .2s;
+}
+
+#dropmenu li ul li a {
+	padding: 13px 15px;
+	background: #6e7c0c;
+	text-align: left;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#dropmenu li ul li input {
+	border: solid 1px #ccc;
+	padding: 4px 30px;
+	margin: 0 0 20px;
+	font-family: Arial, sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #333;
+	cursor: pointer;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ddd),
+		to(#aaa));
+	background-image: -webkit-linear-gradient(top, #ddd, #aaa);
+	background-image: -moz-linear-gradient(top, #ddd, #aaa);
+	background-image: -ms-linear-gradient(top, #ddd, #aaa);
+	background-image: -o-linear-gradient(top, #ddd, #aaa);
+	background-image: linear-gradient(top, #ddd, #aaa);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ddd',
+		endColorstr='#aaa', GradientType=0); /* IE6-9 */
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px
+		rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px
+		rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px
+		rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-shadow: 0px -1px 1px rgba(255, 255, 255, 0.8);
+}
+
+#dropmenu li:hover ul li {
+	overflow: visible;
+	height: 38px;
+	border-top: 1px solid #7c8c0e;
+	border-bottom: 1px solid #616d0b;
+}
+
+#dropmenu li:hover ul li:first-child {
+	border-top: 0;
+}
+
+#dropmenu li:hover ul li:last-child {
+	border-bottom: 0;
+}
+
+#dropmenu li:hover ul li:last-child a {
+	border-radius: 0 0 3px 3px;
+}

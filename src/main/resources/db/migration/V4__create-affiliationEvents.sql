@@ -1,4 +1,4 @@
-CREATE TABLE M_affiliationEvents (id BIGINT NOT NULL PRIMARY KEY,
+CREATE TABLE affiliationEvents (id BIGINT NOT NULL PRIMARY KEY,
                       eventDate DATE DEFAULT CURRENT_TIMESTAMP(),
                       postingDate DATE DEFAULT DATEADD('DAY', 1, CURRENT_TIMESTAMP()),
                       postingEndDate DATE DEFAULT DATEADD('MONTH', 1, CURRENT_TIMESTAMP()),
