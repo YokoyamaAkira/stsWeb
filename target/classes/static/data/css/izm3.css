@@ -1,0 +1,388 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*--------------------------CONTENTS---------------------------------*/
+
+      *.float
+      {
+         float: left;
+         margin-right: 1em;
+      }
+      *.floatclear
+      {
+         clear: both;
+		 height:30px;
+      }
+	  
+	  *.float2
+      {
+         float: right;
+         margin-right: 1em;
+      }
+      *.floatclear2
+      {
+         clear: both;
+		 height:30px;
+      }
+
+
+
+#section {
+    float:right;
+    width:620px;
+    text-align:left;
+    margin:10px 10px 0 5px;
+	padding:0;
+}
+.kami{
+	font-size:11px;
+}
+.kami a{
+	color:#5271B3;
+	text-decoration:none;
+}
+#section h1{
+	margin:0;
+}
+
+#section h2{
+	font-size:16px;
+	border-bottom:1px solid #039;
+	color:#039;
+			margin:0 0 20px 0;
+}
+#section h2.normal{
+	font-size:13px;
+	border-bottom:none;
+	color:#000;
+	font-weight:normal;
+			margin:0 0 30px 0;
+			line-height:25px;
+}
+#section h3{
+	font-size:16px;
+	border-bottom:1px solid #039;
+	color:#039;
+	margin:0 0 20px 0;
+}
+#section strong{
+	font-size:16px;
+	border-bottom:1px solid #039;
+	color:#039;
+	margin:0 0 20px 0;
+	width:620px;
+}
+#section h3.normal{
+	font-size:14px;
+	border-bottom:none;
+	color:#039;
+	margin:20px 0 20px 0;
+}
+.clear{
+	width:620px;
+	height:20px;
+	margin:0;
+}
+#section p{
+	margin:0 0 10px 0;
+	font-size:13px;
+	line-height:25px;
+}
+#section p.p_text{
+	margin:0 0 20px 12px;
+	font-size:12px;
+}
+#section p.p_text2{
+	margin:0 0 10px 12px;
+	font-size:12px;
+	text-align:right;
+}
+.telbox{
+	border:1px dashed #06C;
+	margin:0;
+	padding:10px;
+	font-size:12px;
+	text-align:center;
+	height:20px;
+	color:#06C;
+}
+#section ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#section li{
+	float:left;
+	margin:0 0 20px 0;
+	padding:0;
+	list-style:none;
+	width:310px;
+	height:100px;
+}
+table{
+	font-size:12px;
+	margin:0;
+	line-height:20px;
+}
+table a{
+	margin:0;
+	color:#039;
+}
+
+table#fix ul{
+	clear:both;
+	margin:0;
+	padding:0;
+	
+}
+table#fix li{
+	margin:0;
+	padding:0;
+	height:20px;
+	width:400px;
+}
+table#fix li.clear{
+	margin:0 0 20px 0;
+	padding:0;
+	height:20px;
+	width:400px;
+}
+table#fix ol{
+	margin:0;
+	padding:0;
+
+}
+
+table#fix{
+	margin:0px 0 20px 0;
+	font:13px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	text-align:left;
+	border:1px solid #ccc;
+	vertical-align:top;
+}
+table#fix td{
+		border-bottom:1px solid #ccc;
+		border-right:1px solid #ccc;
+		padding:5px;
+}
+table#fix td.non{
+		border-right:none;
+		border-bottom:1px solid #ccc;
+}
+table#fix td.nonnon{
+		border-bottom:none;
+		border-right:1px solid #ccc;
+}
+table#fix td.nonnonnon{
+		border:none;
+}
+
+.r1{
+	background:url(../img/izm_btn1.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+
+}
+.r1 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.r2{
+	background:url(../img/izm_btn2.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:right;
+	position:relative;
+
+}
+.r2 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.r3{
+	background:url(../img/izm_btn3.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+}
+.r3 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.r1 .c_text1{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.r2 .c_text2{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.r3 .c_text3{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+h3.rec{
+	margin:0;
+	font-size:14px;
+	width:180px;
+	border-bottom:1px solid #999;
+	text-align:center;
+	color:#333;
+	text-decoration:none;
+	display:block;
+}
+h4.rec{
+	margin:15px 0 0 0;
+	font-size:12px;
+	color:#333;
+	width:180px;
+	font-weight:normal;
+	text-decoration:none;
+	border:none;
+	
+}
+/*--------------------------SIDE---------------------------------*/
+
+aside {
+    float:left;
+    width:290px;
+	position:relative;
+	margin:10px 0 0 10px;
+	
+}
+.company_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:230px;
+	background:url(../img/company_menu.jpg) no-repeat;
+}
+.privacy_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:140px;
+	background:url(../img/privacy_menu.jpg) no-repeat;
+}
+.recruit_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:270px;
+	background:url(../img/recruit_menu.jpg) no-repeat;
+}
+.izm_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:160px;
+	background:url(../img/izm_menu.jpg) no-repeat;
+}
+.company_menu ul , .privacy_menu ul , .recruit_menu ul , .izm_menu ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	top:50px;
+	width:270px;
+	left:15px;
+}
+.company_menu li , .privacy_menu li , .recruit_menu li , .izm_menu li{
+	list-style:none;
+	margin:0 0 10px 0;
+	padding:0;
+	font-size:12px;
+	height:22px;
+	width:270px;
+	border-bottom:1px #CFD8EB solid;
+	color:#003D79;
+}
+.company_menu li.last , .privacy_menu li.last , .recruit_menu li.last , .izm_menu li.last{
+	border:none;
+}
+.company_menu li a , .privacy_menu li a , .recruit_menu li a , .izm_menu li a{
+	margin:0;
+	color:#039;
+	text-decoration:none;
+	display:block;
+}
+.company_menu li a:hover , .privacy_menu li a:hover , .recruit_menu li a:hover , .izm_menu li a:hover{
+	margin:0;
+	color:#B6C4E0;
+	text-decoration:none;
+}
+h5{
+	background:url(../img/flow_btn.jpg) no-repeat;
+	width:290px;
+	height:100px;
+	text-indent:-9999px;
+		margin:0;
+}
+h5 a{
+	margin:0;
+	width:290px;
+	height:100px;
+	display:block;
+	overflow:hidden;
+}
+h6{
+	background:url(../img/recruit_btn.jpg) no-repeat;
+	width:283px;
+	height:65px;
+	text-indent:-9999px;
+	margin:20px 0 0 5px;
+}
+h6 a{
+	margin:0;
+	width:283px;
+	height:65px;
+	display:block;
+	overflow:hidden;
+}
+
+.pagetop{
+		clear:both;
+		margin:0;
+		float:right;
+}
+.pagetop p{
+	margin:0;
+	width:70px;
+	height:60px;
+	background:url(../img/pagetop.jpg) no-repeat;
+			position:relative;
+			top:0;
+			text-indent:-9990px;
+}
+.pagetop p a{
+	margin:0;
+	width:70px;
+	height:60px;
+	display:block;
+	
+}
+

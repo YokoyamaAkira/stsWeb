@@ -1,0 +1,320 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*--------------------------CONTENTS---------------------------------*/
+
+#section {
+    float:right;
+    width:620px;
+    text-align:left;
+    margin:10px 10px 0 5px;
+	padding:0;
+}
+.kami{
+	font-size:11px;
+}
+.kami a{
+	color:#5271B3;
+	text-decoration:none;
+}
+.flow1_back{
+	background:url(../img/flow1.jpg) no-repeat;
+	margin:0;
+	width:620px;
+	height:2350px;
+}
+.flow1{
+	margin:0;
+	width:580px;
+	height:360px;
+	position:relative;
+	left:40px;
+	top:60px;
+}
+.flow1 ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.flow1 li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-size:13px;
+
+}
+#section h1{
+	margin:0;
+}
+#section h2{
+	margin:0 0 20px 0;
+	font-size:13px;
+	font-weight:normal;
+}
+h3{
+	font-weight:normal;
+}
+h2.t1{
+	position:relative;
+	top:85px;
+	left:80px;
+	margin:0;
+	font-size:15px;
+		color:#5874B7;
+		height:300px;
+}
+h3.t2{
+	position:relative;
+	top:45px;
+	left:60px;
+	margin:0;
+	font-size:15px;
+	color:#5874B7;
+	height:30px;
+}
+h3.t3{
+	position:relative;
+	top:130px;
+	left:195px;
+	margin:0;
+	font-size:15px;
+	color:#5874B7;
+	height:40px;
+}
+h3.t4{
+	position:relative;
+	top:340px;
+	left:260px;
+	margin:0;
+	font-size:15px;
+	color:#5874B7;
+	height:20px;
+}
+h3.t5{
+	position:relative;
+	top:505px;
+	left:150px;
+	margin:0;
+	font-size:15px;
+	color:#5874B7;
+	height:20px;
+}
+.t6{
+	position:relative;
+	top:525px;
+	left:100px;
+	margin:0;
+	font-size:13px;
+	height:100px;
+}
+h3.t7{
+	position:relative;
+	top:660px;
+	left:65px;
+	margin:0;
+	font-size:15px;
+	color:#5874B7;
+	height:20px;
+}
+h3.t8{
+	position:relative;
+	top:830px;
+	left:255px;
+	margin:0;
+	font-size:15px;
+	color:#5874B7;
+	height:20px;
+}
+h3.t9{
+	position:relative;
+	top:965px;
+	left:145px;
+	margin:0;
+	font-size:15px;
+	color:#5874B7;
+	height:50px;
+}
+h3.t10{
+	position:relative;
+	top:1220px;
+	left:170px;
+	margin:0;
+	font-size:15px;
+	color:#5874B7;
+}
+p.check{
+	font-size:20px;
+	color:#C00;
+	border-bottom:1px solid #C00;
+	margin:0;
+	width:470px;
+}
+p.big{
+	font-size:15px;
+	margin:0;
+}
+h2{
+	margin:0;
+}
+.contact_main{
+	background:url(../img/contact_back.jpg) no-repeat;
+	width:730px;
+	height:270px;
+	margin:0 0 30px 0;
+	clear:both;
+}
+.contact_main h4{
+	width:292px;
+	height:54px;
+	margin:0;
+	text-indent:-999em;
+		position:relative;
+	left:18px;
+	top:114px;
+}
+.contact_main h4 a{
+	width:292px;
+	height:54px;
+	margin:0;
+	display:block;
+}
+
+
+#section p{
+	font-size:13px;
+	margin:0;
+}
+
+
+
+/*--------------------------SIDE---------------------------------*/
+
+aside {
+    float:left;
+    width:290px;
+	position:relative;
+	margin:10px 0 0 10px;
+	
+}
+.company_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:230px;
+	background:url(../img/company_menu.jpg) no-repeat;
+}
+.service_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:200px;
+	background:url(../img/company_menu.jpg) no-repeat;
+}
+.privacy_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:140px;
+	background:url(../img/privacy_menu.jpg) no-repeat;
+}
+.recruit_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:270px;
+	background:url(../img/recruit_menu.jpg) no-repeat;
+}
+.izm_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:160px;
+	background:url(../img/izm_menu.jpg) no-repeat;
+}
+.recruitx_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:300px;
+	background:url(../img/recruitx_menu.jpg) no-repeat;
+}
+.company_menu ul , .privacy_menu ul , .recruit_menu ul , .izm_menu ul , .service_menu ul , .recruitx_menu ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	top:50px;
+	width:270px;
+	left:15px;
+}
+.company_menu li , .privacy_menu li , .recruit_menu li , .izm_menu li , .service_menu li , .recruitx_menu li{
+	list-style:none;
+	margin:0 0 10px 0;
+	padding:0;
+	font-size:12px;
+	height:22px;
+	width:270px;
+	border-bottom:1px #CFD8EB solid;
+	color:#003D79;
+}
+.company_menu li.last , .privacy_menu li.last , .recruit_menu li.last , .izm_menu li.last , .service_menu li.last , .recruitx_menu li.last{
+	border:none;
+}
+.company_menu li a , .privacy_menu li a , .recruit_menu li a , .izm_menu li a , .service_menu li a , .recruitx_menu a{
+	margin:0;
+	color:#039;
+	text-decoration:none;
+	display:block;
+	overflow:hidden;
+}
+.company_menu li a:hover , .privacy_menu li a:hover , .recruit_menu li a:hover , .izm_menu li a:hover , .service_menu li a:hover , .recruitx_menu li a:hover{
+	margin:0;
+	color:#B6C4E0;
+	text-decoration:none;
+}
+h5{
+	background:url(../img/flow_btn.jpg) no-repeat;
+	width:290px;
+	height:100px;
+	text-indent:-9999px;
+		margin:0;
+}
+h5 a{
+	margin:0;
+	width:290px;
+	height:100px;
+	display:block;
+	overflow:hidden;
+}
+h6{
+	background:url(../img/recruit_btn.jpg) no-repeat;
+	width:283px;
+	height:65px;
+	text-indent:-9999px;
+	margin:20px 0 0 5px;
+}
+h6 a{
+	margin:0;
+	width:283px;
+	height:65px;
+	display:block;
+	overflow:hidden;
+}
+
+.pagetop{
+		clear:both;
+		margin:0;
+		float:right;
+}
+.pagetop p{
+	margin:0;
+	width:70px;
+	height:60px;
+	background:url(../img/pagetop.jpg) no-repeat;
+			position:relative;
+			top:0;
+			text-indent:-9990px;
+}
+.pagetop p a{
+	margin:0;
+	width:70px;
+	height:60px;
+	display:block;
+	
+}
+

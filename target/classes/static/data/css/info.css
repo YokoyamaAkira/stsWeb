@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*--------------------------info---------------------------------*/
+.post{
+padding-left:30px;
+}
+.post p{
+margin-bottom:15px;
+}
+.post p a{
+    color:#5271B3;
+	text-decoration:none;
+}
+.post p a:hover{
+	text-decoration:underline;
+}
+p.date{
+margin-bottom:5px;
+}
+h3.title{
+	text-decoration:none;
+	color:#5271B3;
+	text-align:left;
+	font: 20px/26px "Hiragino Mincho Pro W3","ヒラギノ明朝 Pro W3","ＭＳ Ｐ明朝", "細明朝体", "Times New Roman", Times, serif;
+	border:none;
+        width:auto;
+	margin-bottom:15px;
+}
+/*--------------------------page navi---------------------------------*/
+.wp-pagenavi {
+	height: 25px;
+	margin: 20px 0 0 0;
+	font-size:12px;
+}
+.wp-pagenavi span.pages {
+	border: none;
+	padding: 3px 5px 3px 0px;
+	margin: 2px 2px 2px 0;
+	font-size:10px;
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	text-decoration: none;
+	padding: 3px 5px;
+	margin: 3px;
+}
+.wp-pagenavi span.current {
+	background:#5271B3;
+	color:#FFFFFF;
+}
+.wp-pagenavi a:hover{
+	background:#5271B3;
+	color:#FFFFFF;
+}

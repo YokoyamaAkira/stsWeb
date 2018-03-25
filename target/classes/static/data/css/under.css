@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*--------------------------CONTENTS---------------------------------*/
+
+#section {
+    float:right;
+    width:620px;
+    text-align:left;
+    margin:10px 10px 0 5px;
+	padding:0;
+}
+.kami{
+	font-size:11px;
+}
+.kami a{
+	color:#5271B3;
+	text-decoration:none;
+}
+.c1{
+	background:url(../img/company_btn1.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+
+}
+.c1 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.c2{
+	background:url(../img/company_btn2.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:right;
+	position:relative;
+
+}
+.c2 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.c3{
+	background:url(../img/company_btn3.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+}
+.c3 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.c4{
+	background:url(../img/izm_btn3.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+
+}
+.c4 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.c5{
+	background:url(../img/company_btn4.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:right;
+	position:relative;
+}
+.c5 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.c6{
+	background:url(../img/company_btn6.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:right;
+	position:relative;
+
+}
+.c6 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.c7{
+	background:url(../img/recruit_btn1.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:right;
+	position:relative;
+
+}
+.c7 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+
+.c1 .c_text1{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.c2 .c_text2{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.c3 .c_text3{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.c4 .c_text4{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.c5 .c_text5{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.c6 .c_text6{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.c7 .c_text7{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+h1{
+	margin:0;
+}
+h2{
+	margin:0;
+}
+h3{
+	margin:0;
+	font-size:14px;
+	width:180px;
+	border-bottom:1px solid #999;
+	text-align:center;
+	color:#333;
+	text-decoration:none;
+	display:block;
+}
+h4{
+	margin:15px 0 0 0;
+	font-size:12px;
+	color:#333;
+	width:180px;
+	font-weight:normal;
+	text-decoration:none;
+	
+}
+#section p{
+	font-size:13px;
+	margin:0;
+}
+#section ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#section li{
+	float:left;
+	margin:0 0 20px 0;
+	padding:0;
+	list-style:none;
+	width:310px;
+	height:100px;
+}
+
+
+
+/*--------------------------SIDE---------------------------------*/
+
+aside {
+    float:left;
+    width:290px;
+	position:relative;
+	margin:10px 0 0 10px;
+	
+}
+h5{
+	background:url(../img/flow_btn.jpg) no-repeat;
+	width:290px;
+	height:100px;
+	text-indent:-9999px;
+		margin:0;
+}
+h5 a{
+	margin:0;
+	width:290px;
+	height:100px;
+	display:block;
+	overflow:hidden;
+}
+h6{
+	background:url(../img/recruit_btn.jpg) no-repeat;
+	width:283px;
+	height:65px;
+	text-indent:-9999px;
+	margin:20px 0 0 5px;
+}
+h6 a{
+	margin:0;
+	width:283px;
+	height:65px;
+	display:block;
+	overflow:hidden;
+}
+
+.pagetop{
+		clear:both;
+		margin:0;
+		float:right;
+}
+.pagetop p{
+	margin:0;
+	width:70px;
+	height:60px;
+	background:url(../img/pagetop.jpg) no-repeat;
+			position:relative;
+			top:0;
+			text-indent:-9990px;
+}
+.pagetop p a{
+	margin:0;
+	width:70px;
+	height:60px;
+	display:block;
+	
+}
+

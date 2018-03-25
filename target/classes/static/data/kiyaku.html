@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8"/> 
+<title>和心システム株式会社</title>
+<link rel="stylesheet" href="./css/header.css" />
+<link rel="stylesheet" href="./css/footer.css" />
+<link rel="stylesheet" href="./css/under_under.css" />
+ 
+ <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+  <header>
+      <ul>
+      <li class="h_btn1"><a href="./member.html">社員専用</a></li>
+</ul>
+      <hgroup>
+        <p><a href="/">和心システム │ 人と技術を大切にすることで、お客様の要請にお応えします！</a></p>
+      </hgroup>     
+
+  </header>
+  
+   <nav>
+      <ul>
+        <li class="nav1"><a href="/">トップページ</a></li>
+        <li class="nav2"><a href="./company.html">会社案内</a></li>
+        <li class="nav3"><a href="./service.html">事業内容</a></li>
+        <li class="nav4"><a href="./works.html">開発実績</a></li>
+        
+        <li class="nav6"><a href="./kiyaku_contact.html">お問い合わせ</a></li>
+      </ul>
+  </nav>
+  
+<div id="wrapper" class="drop-shadow">
+    
+<section>
+
+       <article>
+       <div class="kami"><a href="/">TOP</a> > お問い合わせ</div>
+       <h1><img src="./img/contact_title.jpg" width="620" height="58" alt="お問い合わせ" /></h1>   
+
+<form method="post" action="<?php echo $self;?>">
+<table border="0" cellspacing="0" cellpadding="0" id="fix" width="620">
+
+	<tr>
+		<td align="right">返信用メールアドレス<b><font color="red">(※必須)</font></b></td>
+		<td class="non"><?php echo $mail; ?><input type="hidden" name="mail" value="<?php echo $mail; ?>" size="30" style="ime-mode:active" /></td>
+	</tr>
+	<tr>
+		<td align="right">お名前<b><font color="red">(※必須)</font></b></td>
+		<td class="non"><?php echo $name; ?><input type="hidden" name="name" value="<?php echo $name; ?>" size="30" style="ime-mode:active" /></td>
+	</tr>
+	<tr>
+		<td align="right" class="no">ふりがな<b><font color="red">(※必須)</font></b></td>
+		<td class="non"><?php echo $kana; ?><input type="hidden" name="kana" value="<?php echo $kana; ?>" size="30" style="ime-mode:active" /></td>
+	</tr>
+    <tr>
+  <td rowspan="2" align="right">お問い合わせ内容<b><font color="red">(※必須)</font></b></td>
+  <td class="non">
+<?php echo $cate; ?><input type="hidden" name="cate" value="<?php echo $cate; ?>"></td>
+</tr>
+	<tr>
+		<td class="non"><?php echo $contact; ?><input type="hidden" name="contact" value="<?php echo $contact; ?>" size="30" style="ime-mode:active" /></td>
+	</tr>
+	
+	<tr>
+		<td align="right" class="no">送信有無</td>
+		<td align="left" class="non">
+			<INPUT type="submit" value="送信" />
+			<INPUT type="button" onClick="history.back()" value="戻る" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center" class="nonnonnon">上記の内容で問題なければ「送信」ボタンをクリックしてください。</td>
+	</tr>
+	<input type="hidden" name="m" id="m" value="res">
+</table>
+</form> 
+<!--メールフォーム-->
+      </article>
+       
+</section>
+
+<aside id="as_side">
+    
+     <h5><a href="./flow.html">システム開発の流れ　見積もりからご契約、ご納品までの流れの相談はコチラ</a></h5>
+     
+     <h6><a href="./recruit.html">採用情報はこちら</a></h6>
+
+</aside>
+  
+</div><!--END WRAPPER-->
+
+
+
+<footer>
+<div class="foot">
+<div class="foot_left">
+<p>和心システム 〒105-0004東京都港区新橋2-19-2 リプロ新橋8F TEL 03-3572-2488 FAX 03-5568-7627
+</p>
+</div>
+<div class="foot_right">
+<p><a href="./privacy.html">プライバシーポリシーはコチラ</a></p>
+</div>
+</div>
+<p class="copyright">COPYRIGHT (c) Washin Systems Co.,Ltd. All Rights Reserved</p>
+</footer>
+
+
+
+</body>
+</html>
+

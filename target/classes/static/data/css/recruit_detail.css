@@ -1,0 +1,516 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*--------------------------CONTENTS---------------------------------*/
+      *.float
+      {
+         float: right;
+         margin-left: 1em;
+		
+      }
+      *.floatclear
+      {
+         clear: both;
+		 height:30px;
+      }
+#section {
+    float:right;
+    width:620px;
+    text-align:left;
+    margin:10px 10px 0 5px;
+	padding:0;
+}
+.kami{
+	font-size:11px;
+}
+.kami a{
+	color:#5271B3;
+	text-decoration:none;
+}
+#section h1{
+	margin:0;
+}
+#section h2{
+	margin:0 0 20px 0;
+	font-size:13px;
+	font-weight:normal;
+}
+#section h3{
+	font-size:16px;
+	border-bottom:1px solid #039;
+	color:#039;
+			margin:0 0 20px 0;
+}
+#section h3.normal{
+	font-size:12px;
+	border-bottom:none;
+	color:#000;
+	font-weight:normal;
+			margin:0 0 30px 0;
+}
+#section h4{
+	font-size:16px;
+	border-bottom:1px solid #039;
+	color:#039;
+		margin:0 0 20px 0;
+}
+#section strong{
+	font-size:16px;
+	border-bottom:1px solid #039;
+	color:#039;
+	margin:0 0 20px 0;
+	width:620px;
+}
+#section h4.normal{
+	font-size:14px;
+	border-bottom:1px solid #039;
+	color:#039;
+			margin:20px 0 20px 0;
+}
+
+#section p{
+	margin:0 0 10px 0;
+	font-size:13px;
+}
+#section p a{
+	margin:0;
+	text-decoration:none;
+}
+#section p.p_text{
+	margin:0 0 20px 12px;
+	font-size:12px;
+}
+#section p.p_text2{
+	margin:0 0 10px 12px;
+	font-size:12px;
+	text-align:right;
+}
+.telbox{
+	border:1px dashed #06C;
+	margin:0;
+	padding:10px;
+	font-size:12px;
+	text-align:center;
+	height:20px;
+	color:#06C;
+}
+#section ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#section li{
+	float:left;
+	margin:0 0 20px 0;
+	padding:0;
+	list-style:none;
+	width:310px;
+	height:100px;
+}
+table{
+	font-size:12px;
+	margin:0;
+	line-height:20px;
+}
+table a{
+	margin:0;
+	color:#039;
+}
+
+table#fix ul{
+	clear:both;
+	margin:0;
+	padding:0;
+	
+}
+table#fix li{
+	margin:0;
+	padding:0;
+	height:20px;
+	width:400px;
+}
+table#fix li.clear{
+	margin:0 0 20px 0;
+	padding:0;
+	height:20px;
+	width:400px;
+}
+table#fix ol{
+	margin:0;
+	padding:0;
+
+}
+
+table#fix{
+	margin:0px 0 20px 0;
+	font:13px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	text-align:left;
+	border:1px solid #ccc;
+	vertical-align:top;
+}
+table#fix td{
+		border-bottom:1px solid #ccc;
+		border-right:1px solid #ccc;
+		padding:5px;
+}
+table#fix td.non{
+		border-right:none;
+		border-bottom:1px solid #ccc;
+}
+table#fix td.nonnon{
+		border-bottom:none;
+		border-right:1px solid #ccc;
+}
+table#fix td.nonnonnon{
+		border:none;
+}
+
+.r1{
+	background:url(../img/izm_btn1.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+
+}
+.r1 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.r2{
+	background:url(../img/izm_btn2.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:right;
+	position:relative;
+
+}
+.r2 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.r3{
+	background:url(../img/izm_btn3.jpg) no-repeat;
+	width:300px;
+	height:100px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+}
+.r3 a{
+	width:300px;
+	height:100px;
+	margin:0;
+	display:block;
+	text-decoration:none;
+}
+.r1 .c_text1{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.r2 .c_text2{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.r3 .c_text3{
+	margin:0;
+	position:relative;
+	left:105px;
+	top:15px;
+	display:block;
+	width:120px;
+}
+.mess1{
+	background:url(../img/mess_btn1.jpg) no-repeat;
+	width:300px;
+	height:150px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+
+}
+
+.mess2{
+	background:url(../img/mess_btn2.jpg) no-repeat;
+	width:300px;
+	height:150px;
+	margin:0 0 20px 0;
+	float:right;
+	position:relative;
+
+}
+.mess1 p a , .mess2 p a , .mess3 p a , .mess4 p a{
+	margin:10px 0 0 0;
+	width:160px;
+	height:20px;
+	display:block;
+}
+
+.mess3{
+	background:url(../img/mess_btn3.jpg) no-repeat;
+	width:300px;
+	height:150px;
+	margin:0 0 20px 0;
+	float:left;
+	position:relative;
+}
+.mess4{
+	background:url(../img/mess_btn4.jpg) no-repeat;
+	width:300px;
+	height:150px;
+	margin:0 0 20px 0;
+	float:right;
+	position:relative;
+}
+
+.mess1 .mess_text1{
+	margin:0;
+	position:relative;
+	left:125px;
+	top:15px;
+	display:block;
+	width:115px;
+}
+.mess2 .mess_text2{
+	margin:0;
+	position:relative;
+	left:125px;
+	top:15px;
+	display:block;
+	width:115px;
+}
+.mess3 .mess_text3{
+	margin:0;
+	position:relative;
+	left:125px;
+	top:15px;
+	display:block;
+	width:115px;
+}
+.mess4 .mess_text4{
+	margin:0;
+	position:relative;
+	left:125px;
+	top:15px;
+	display:block;
+	width:115px;
+}
+.rech3{
+	margin:0;
+	font-size:14px;
+	width:160px;
+	border-bottom:1px solid #999;
+	text-align:center;
+	color:#333;
+	text-decoration:none;
+	display:block;
+}
+
+.rech4{
+	margin:15px 0 0 0;
+	font-size:12px;
+	color:#333;
+	width:230px;
+	font-weight:normal;
+	text-decoration:none;
+	border:none;
+	
+}
+.rech42{
+	margin:15px 0 0 0;
+	font-size:10px;
+	color:#333;
+	width:180px;
+	font-weight:normal;
+	text-decoration:none;
+	border:none;
+	
+}
+#section h3.normalx{
+	font-size:11px;
+	color:#000;
+			margin:0;
+			text-align:center;
+			border:none;
+			width:160px;
+}
+.recruit_detail{
+	width:620px;
+	height:200px;
+	clear:both;
+	margin:0;
+}
+.recruit_detail_left{
+	margin:0;
+	width:313px;
+	height:200px;
+	float:left;
+}
+.recruit_detail_right{
+	margin:0;
+	width:300px;
+	height:200px;
+	float:right;
+	position:relative;
+}
+/*--------------------------SIDE---------------------------------*/
+
+aside {
+    float:left;
+    width:290px;
+	position:relative;
+	margin:10px 0 0 10px;
+	
+}
+.company_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:230px;
+	background:url(../img/company_menu.jpg) no-repeat;
+}
+.service_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:200px;
+	background:url(../img/company_menu.jpg) no-repeat;
+}
+.privacy_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:140px;
+	background:url(../img/privacy_menu.jpg) no-repeat;
+}
+.recruit_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:270px;
+	background:url(../img/recruit_menu.jpg) no-repeat;
+}
+.recruit_menu2{
+	margin:0 0 20px 0;
+	width:290px;
+	height:210px;
+	background:url(../img/recruit_menu2.jpg) no-repeat;
+}
+.izm_menu{
+	margin:0 0 20px 0;
+	width:290px;
+	height:160px;
+	background:url(../img/izm_menu.jpg) no-repeat;
+}
+.company_menu ul , .privacy_menu ul , .recruit_menu2 ul , .izm_menu ul , .service_menu ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	top:50px;
+	width:270px;
+	left:15px;
+}
+.company_menu li , .privacy_menu li , .recruit_menu2 li , .izm_menu li , .service_menu li{
+	list-style:none;
+	margin:0 0 10px 0;
+	padding:0;
+	font-size:12px;
+	height:22px;
+	width:270px;
+	border-bottom:1px #CFD8EB solid;
+	color:#003D79;
+}
+.company_menu li.last , .privacy_menu li.last , .recruit_menu2 li.last , .izm_menu li.last , .service_menu li{
+	border:none;
+}
+.company_menu li a , .privacy_menu li a , .recruit_menu2 li a , .izm_menu li a , .service_menu li a{
+	margin:0;
+	color:#039;
+	text-decoration:none;
+	display:block;
+}
+.company_menu li a:hover , .privacy_menu li a:hover , .recruit_menu2 li a:hover , .izm_menu li a:hover , .service_menu li a:hover{
+	margin:0;
+	color:#B6C4E0;
+	text-decoration:none;
+}
+p.texting{
+	margin:30px 0 20px 0;
+	padding-top:20px;
+	border-bottom:1px dashed #3466AD;
+font-size:14px;
+color:#3466AD;
+text-align:left;
+}
+p.texting2{
+	margin:30px 0 20px 0;
+	border-bottom:1px dashed #3466AD;
+font-size:14px;
+color:#3466AD;
+width:400px;
+}
+h5{
+	background:url(../img/flow_btn.jpg) no-repeat;
+	width:290px;
+	height:100px;
+	text-indent:-9999px;
+		margin:0;
+}
+h5 a{
+	margin:0;
+	width:290px;
+	height:100px;
+	display:block;
+	overflow:hidden;
+}
+h6{
+	background:url(../img/recruit_btn.jpg) no-repeat;
+	width:283px;
+	height:65px;
+	text-indent:-9999px;
+	margin:20px 0 0 5px;
+}
+h6 a{
+	margin:0;
+	width:283px;
+	height:65px;
+	display:block;
+	overflow:hidden;
+}
+
+.pagetop{
+		clear:both;
+		margin:0;
+		float:right;
+}
+.pagetop p{
+	margin:0;
+	width:70px;
+	height:60px;
+	background:url(../img/pagetop.jpg) no-repeat;
+			position:relative;
+			top:0;
+			text-indent:-9990px;
+}
+.pagetop p a{
+	margin:0;
+	width:70px;
+	height:60px;
+	display:block;
+	
+}
+
