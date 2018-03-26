@@ -29,8 +29,8 @@ public class EventController {
 
     @GetMapping
     String list(Model model) {
-        List<Customer> customerTests = customerService.findAll();
-        model.addAttribute("customers", customerTests);
+        List<Customer> customers = customerService.findAll();
+        model.addAttribute("customers", customers);
         return "maintenance/newsOperation/eventsList";
     }
 
@@ -40,9 +40,9 @@ public class EventController {
         if (result.hasErrors()) {
             return list(model);
         }
-        Customer customerTest = new Customer();
-        BeanUtils.copyProperties(form, customerTest);
-        customerService.create(customerTest, userDetails.getUser());
+        Customer customer = new Customer();
+        BeanUtils.copyProperties(form, customer);
+        customerService.create(customer, userDetails.getUser());
         return "redirect:/maintenance/newsOperation";
     }
 
@@ -59,10 +59,10 @@ public class EventController {
         if (result.hasErrors()) {
             return editForm(id, form);
         }
-        Customer customerTest = new Customer();
-        BeanUtils.copyProperties(form, customerTest);
-        customerTest.setId(id);
-        customerService.update(customerTest, userDetails.getUser());
+        Customer customer = new Customer();
+        BeanUtils.copyProperties(form, customer);
+        customer.setId(id);
+        customerService.update(customer, userDetails.getUser());
         return "redirect:/maintenance/newsOperation";
     }
 
