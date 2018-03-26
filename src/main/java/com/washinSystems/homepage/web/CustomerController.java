@@ -28,8 +28,8 @@ public class CustomerController {
 
     @GetMapping
     String list(Model model) {
-        List<Customer> customers = customerService.findAll();
-        model.addAttribute("customers", customers);
+        List<Customer> customerTests = customerService.findAll();
+        model.addAttribute("customers", customerTests);
         return "customers/list";
     }
 
@@ -58,10 +58,10 @@ public class CustomerController {
         if (result.hasErrors()) {
             return editForm(id, form);
         }
-        Customer customer = new Customer();
-        BeanUtils.copyProperties(form, customer);
-        customer.setId(id);
-        customerService.update(customer, userDetails.getUser());
+        Customer customerTest = new Customer();
+        BeanUtils.copyProperties(form, customerTest);
+        customerTest.setId(id);
+        customerService.update(customerTest, userDetails.getUser());
         return "redirect:/customers";
     }
 

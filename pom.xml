@@ -85,10 +85,11 @@
 		</dependency>
 
 		<!-- 20180325 [Java][Spring]JUnit + JMockitでユニットテストとカバレッジを導入する https://atuweb.net/201606_junit-jmockit-test-and-coverage/ -->
+	    <!-- C:\Users\yoko\.m2\repository\org\jmockit\jmockit\1.21 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>${spring-ver}</version>
+			<!--<version>${spring-ver}</version> -->
 		</dependency>
 		<dependency>
 			<groupId>org.jmockit</groupId>
@@ -103,7 +104,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit-ver}</version>
+<!-- 			<version>${junit-ver}</version> -->
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
