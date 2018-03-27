@@ -25,3 +25,6 @@ public class WashinHomePageApplicationTest {
 
 //http://arakan-pgm-ai.hatenablog.com/entry/2017/02/21/215839
 //STS＋SpringBootプロジェクトでJUNIT４を使った単体テストをする。 
+
+//JUnit INDEX
+//http://www.techscore.com/tech/Java/Others/JUnit/index/
