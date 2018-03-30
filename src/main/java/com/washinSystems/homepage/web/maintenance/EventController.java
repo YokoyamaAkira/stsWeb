@@ -48,8 +48,8 @@ public class EventController {
 
     @GetMapping(path = "eventEdit", params = "form")
     String editForm(@RequestParam Integer id, CustomerForm form) {
-        Customer customerTest = customerService.findOne(id);
-        BeanUtils.copyProperties(customerTest, form);
+        Customer customer = customerService.findOne(id);
+        BeanUtils.copyProperties(customer, form);
         return "maintenance/newsOperation/eventEdit";
     }
 

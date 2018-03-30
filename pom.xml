@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -85,7 +84,7 @@
 		</dependency>
 
 		<!-- 20180325 [Java][Spring]JUnit + JMockitでユニットテストとカバレッジを導入する https://atuweb.net/201606_junit-jmockit-test-and-coverage/ -->
-	    <!-- C:\Users\yoko\.m2\repository\org\jmockit\jmockit\1.21 -->
+		<!-- C:\Users\yoko\.m2\repository\org\jmockit\jmockit\1.21 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -104,11 +103,16 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-<!-- 			<version>${junit-ver}</version> -->
+			<!-- <version>${junit-ver}</version> -->
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-<!-- 20180325 end -->
+	<!-- 20180325 end -->
 	<build>
 		<plugins>
 			<plugin>

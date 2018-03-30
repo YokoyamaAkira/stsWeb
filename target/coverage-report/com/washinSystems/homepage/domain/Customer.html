@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../../../logo.png'/>
+  <script type='text/javascript' src='../../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>washinHomePage\src\main\java\com\washinSystems\homepage\domain\Customer.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package com.washinSystems.homepage.domain;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>9</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'><span id='l9s0' title='Executions: 0' class='uncovered'>@Data</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>10</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l10s0'>@NoArgsConstructor</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l11s0'>@AllArgsConstructor</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>@Entity</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>@Table(name = "customers")</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Customer {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    @Id</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    @GeneratedValue</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private Integer id;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private String firstName;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>19</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private String lastName;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    @ManyToOne(fetch = FetchType.LAZY)</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    @JoinColumn(nullable = true, name = "username")</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private User user;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>
