@@ -3,33 +3,15 @@
  */
 package com.washinSystems.homepage.web;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-
-import com.washinSystems.homepage.SecurityConfig;
-import com.washinSystems.homepage.WashinHomePageApplication;
-import com.washinSystems.homepage.domain.Customer;
-import com.washinSystems.homepage.domain.User;
-import com.washinSystems.homepage.repository.UserRepository;
-
-import mockit.integration.junit4.JMockit;
 
 /*
  * Spring Securityを使っているWebアプリのUnitテスト
@@ -38,10 +20,15 @@ import mockit.integration.junit4.JMockit;
  * SpringMVC Cotrollerのテスト
  * https://ameblo.jp/trap-z/entry-11742867900.html
  * 
+ * Spring Security 4.0: WebSocket, Spring Data, テストサポート
+ * https://www.infoq.com/jp/news/2015/05/spring-security-4
+ * 
+ * Spring bootでweb セキュリティ（ログイン認証）編
+ * https://www.slideshare.net/navekazu/spring-bootweb-55470364
  */
 /**
  * @author yoko
- *
+ *https://qiita.com/opengl-8080/items/eaa8f4eb9286a3df7986
  */
 
 @RunWith(SpringRunner.class)
