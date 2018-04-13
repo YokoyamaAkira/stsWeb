@@ -10,8 +10,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import com.washinSystems.homepage.domain.Customer;
+import com.washinSystems.homepage.domain.LoginUserDetails;
 import com.washinSystems.homepage.service.CustomerService;
-import com.washinSystems.homepage.service.LoginUserDetails;
 
 import java.util.List;
 

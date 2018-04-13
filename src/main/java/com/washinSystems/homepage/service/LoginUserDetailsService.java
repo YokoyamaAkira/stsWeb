@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.washinSystems.homepage.domain.LoginUserDetails;
 import com.washinSystems.homepage.domain.User;
 import com.washinSystems.homepage.repository.UserRepository;
 

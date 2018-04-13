@@ -9,10 +9,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import com.washinSystems.homepage.domain.Customer;
-import com.washinSystems.homepage.service.CustomerService;
-import com.washinSystems.homepage.service.LoginUserDetails;
-import com.washinSystems.homepage.web.CustomerForm;
+import com.washinSystems.homepage.domain.LoginUserDetails;
+import com.washinSystems.homepage.domain.NoticeEvent;
+import com.washinSystems.homepage.service.NoticeEventService;
+import com.washinSystems.homepage.web.maintenance.formData.EventForm;
 
 import java.util.List;
 
@@ -20,49 +20,49 @@ import java.util.List;
 @RequestMapping("maintenance/newsOperation")
 public class EventController {
     @Autowired
-    CustomerService customerService;
+    NoticeEventService noticeEventService;
 
     @ModelAttribute
-    CustomerForm setUpForm() {
-        return new CustomerForm();
+    EventForm setUpForm() {
+        return new EventForm();
     }
 
     @GetMapping
     String list(Model model) {
-        List<Customer> customers = customerService.findAll();
-        model.addAttribute("customers", customers);
+        List<NoticeEvent> noticeEvents = noticeEventService.findAll();
+        model.addAttribute("noticeEvents", noticeEvents);
         return "maintenance/newsOperation/eventsList";
     }
 
     @PostMapping(path = "create")
-    String create(@Validated CustomerForm form, BindingResult result, Model model,
+    String create(@Validated EventForm form, BindingResult result, Model model,
                   @AuthenticationPrincipal LoginUserDetails userDetails) {
         if (result.hasErrors()) {
             return list(model);
         }
-        Customer customer = new Customer();
-        BeanUtils.copyProperties(form, customer);
-        customerService.create(customer, userDetails.getUser());
+        NoticeEvent noticeEvent = new NoticeEvent();
+        BeanUtils.copyProperties(form, noticeEvent);
+        noticeEventService.create(noticeEvent, userDetails.getUser());
         return "redirect:/maintenance/newsOperation";
     }
 
     @GetMapping(path = "eventEdit", params = "form")
-    String editForm(@RequestParam Integer id, CustomerForm form) {
-        Customer customer = customerService.findOne(id);
-        BeanUtils.copyProperties(customer, form);
+    String editForm(@RequestParam Integer id, EventForm form) {
+    	NoticeEvent noticeEvent = noticeEventService.findOne(id);
+        BeanUtils.copyProperties(noticeEvent, form);
         return "maintenance/newsOperation/eventEdit";
     }
 
     @PostMapping(path = "eventEdit")
-    String edit(@RequestParam Integer id, @Validated CustomerForm form, BindingResult result,
+    String edit(@RequestParam Integer id, @Validated EventForm form, BindingResult result,
                 @AuthenticationPrincipal LoginUserDetails userDetails) {
         if (result.hasErrors()) {
             return editForm(id, form);
         }
-        Customer customer = new Customer();
-        BeanUtils.copyProperties(form, customer);
-        customer.setId(id);
-        customerService.update(customer, userDetails.getUser());
+        NoticeEvent noticeEvent = new NoticeEvent();
+        BeanUtils.copyProperties(form, noticeEvent);
+        noticeEvent.setId(id);
+        noticeEventService.update(noticeEvent, userDetails.getUser());
         return "redirect:/maintenance/newsOperation";
     }
 
@@ -73,7 +73,7 @@ public class EventController {
 
     @PostMapping(path = "delete")
     String delete(@RequestParam Integer id) {
-        customerService.delete(id);
+    	noticeEventService.delete(id);
         return "redirect:/maintenance/newsOperation";
     }
 }

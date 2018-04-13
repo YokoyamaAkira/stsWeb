@@ -1,9 +1,7 @@
-package com.washinSystems.homepage.service;
+package com.washinSystems.homepage.domain;
 
 import lombok.Data;
 import org.springframework.security.core.authority.AuthorityUtils;
-
-import com.washinSystems.homepage.domain.User;
 
 @Data
 public class LoginUserDetails extends org.springframework.security.core.userdetails.User {
