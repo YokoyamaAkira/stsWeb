@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.washinSystems.homepage.domain.User;
 import com.washinSystems.homepage.repository.UserRepository;
+import com.washinSystems.homepage.web.LoginUserDetails;
 
 @Service
 public class LoginUserDetailsService implements UserDetailsService {

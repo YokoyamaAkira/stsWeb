@@ -1,26 +1,28 @@
 package com.washinSystems.homepage.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+//import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.List;
+//import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-@ToString(exclude = "customers")
+//@ToString(exclude = "customers")
 public class User {
     @Id
+    @Column(name="username")
     private String username;
-    @JsonIgnore
+ //   @JsonIgnore
+    @Column(name="encoded_password")
     private String encodedPassword;
-    @JsonIgnore
+/*    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
-    private List<Customer> customers;
+    private List<Customer> customers;*/
 }
