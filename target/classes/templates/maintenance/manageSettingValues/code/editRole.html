@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head lang="en">
+<meta charset="UTF-8">
+<title>顧客情報編集</title>
+<object th:replace="/CommonPartsForHTML/parts1 :: linkBasic"></object>
+<object
+	th:replace="/CommonPartsForHTML/parts1 :: linkDatepickerForCalendar"></object>
+</head>
+<body>
+	<div th:replace="/CommonPartsForHTML/parts1 :: naviCopy"></div>
+	<div class="container">
+		<h1>役割管理</h1>
+		<div class="col-sm-12">
+			<form th:action="@{/maintenance/manageSettingValues/code/editRole}"
+				th:object="${codeRoleForm}" class="form-horizontal" method="post">
+				<fieldset>
+				<div th:if="*{roleId}" >
+					<legend>役割情報の編集</legend>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('roleId')}? 'has-error has-feedback'">
+						<label for="roleId" class="col-sm-2 control-label">ＩＤ</label>
+						<div class="col-sm-10">
+							<span th:text="*{roleId}">10</span>
+						</div>
+						<input type="hidden" id="roleId" name="roleId"
+							th:value="*{roleId}">
+					</div>
+					</div>
+					<div th:unless="*{roleId}" >
+					<legend>役割の作成</legend>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('startDate')}? 'has-error has-feedback'">
+						<label for="startDate" class="col-sm-2 control-label">開始日</label>
+
+						<div class="col-sm-10">
+							<input type="text" id="startDate" name="startDate"
+								th:field="*{startDate}" class="form-control" value="2018/8/10">
+							<span th:if="${#fields.hasErrors('startDate')}"
+								th:errors="*{startDate}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('endDate')}? 'has-error has-feedback'">
+						<label for="endDate" class="col-sm-2 control-label">終了日</label>
+
+						<div class="col-sm-10">
+							<input type="text" id="endDate" name="endDate"
+								th:field="*{endDate}" class="form-control" value="2018/4/1">
+							<span th:if="${#fields.hasErrors('endDate')}"
+								th:errors="*{endDate}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('roleName')}? 'has-error has-feedback'">
+						<label for="title" class="col-sm-2 control-label">役割名</label>
+
+						<div class="col-sm-10">
+							<input type="text" id="roleName" name="roleName"
+								th:field="*{roleName}" class="form-control" value="イベント　テスト">
+							<span th:if="${#fields.hasErrors('roleName')}"
+								th:errors="*{roleName}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('description')}? 'has-error has-feedback'">
+						<label for="description" class="col-sm-2 control-label">詳細</label>
+
+						<div class="col-sm-10">
+							<input type="text" id="description" name="description"
+								th:field="*{description}" class="form-control"
+								value="イベントの場所、日時等"> <span
+								th:if="${#fields.hasErrors('description')}"
+								th:errors="*{description}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('delF')}? 'has-error has-feedback'">
+						<label for="delF" class="col-sm-2 control-label">削除の有無</label>
+						<div class="col-sm-10">
+							<label> <input type="checkbox" id="delF" name="delF"
+								value="true" th:field="*{delF}" /> 利用しない
+							</label>
+						</div>
+						<span th:if="${#fields.hasErrors('delF')}" th:errors="*{delF}"
+							class="help-block">error!</span>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="submit" class="btn btn-default" name="goToBack"
+								value="戻る"> <input type="hidden" name="id"
+								th:value="${param.id[0]}"> 
+								<input th:if="*{roleId}" type="submit"
+								class="btn btn-primary" name="edit" value="更新">
+								<input th:unless="*{roleId}" type="submit"
+								class="btn btn-primary" name="create" value="作成">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div th:replace="/CommonPartsForHTML/parts1 :: scriptBasic"></div>
+	<div
+		th:replace="/CommonPartsForHTML/parts1 :: scriptDatepickerForCalendar"></div>
+	<!-- 	カレンダ用 -->
+	<script>
+		$(function() {
+			$("#startDate").datepicker();
+			$("#startDate").datepicker("option", "showOn", 'both');
+
+			$("#endDate").datepicker();
+			$("#endDate").datepicker("option", "showOn", 'both');
+		});
+	</script>
+	<!-- 	カレンダ用 -->
+</body>
+</html>

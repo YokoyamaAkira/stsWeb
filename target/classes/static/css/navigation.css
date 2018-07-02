@@ -21,6 +21,7 @@ http: //weboook.blog22.fc2.com /blog-entry-359.html
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	z-index: 100 !important;/*表示レイアを一番上にするために追加:20180502:yoko*/
 }
 
 #dropmenu li a { /*メインメニューのスタイルを決めている*/

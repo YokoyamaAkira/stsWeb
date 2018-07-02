@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head lang="en">
+<meta charset="UTF-8">
+<title>顧客情報編集</title>
+<object th:replace="/CommonPartsForHTML/parts1 :: linkBasic"></object>
+<object
+	th:replace="/CommonPartsForHTML/parts1 :: linkDatepickerForCalendar"></object>
+</head>
+<body>
+	<div th:replace="/CommonPartsForHTML/parts1 :: naviCopy"></div>
+	<div class="container">
+		<h1>メンバー管理</h1>
+		<div class="col-sm-12">
+			<form
+				th:action="@{/maintenance/manageSettingValues/member/editMaintenancePersonnel}"
+				th:object="${personalForm}" class="form-horizontal" method="post">
+				<fieldset>
+					<div th:if="*{id}">
+						<legend>メンバー情報の編集</legend>
+						<div class="form-group"
+							th:classappend="${#fields.hasErrors('id')}? 'has-error has-feedback'">
+							<label for="id" class="col-sm-2 control-label">ＩＤ</label>
+							<div class="col-sm-10">
+								<span th:text="*{id}">10</span>
+							</div>
+							<input type="hidden" id="id" name="id" th:value="*{id}">
+						</div>
+					</div>
+					<div th:unless="*{id}">
+						<legend>メンバーの作成</legend>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('userName')}? 'has-error has-feedback'">
+						<label for="userName" class="col-sm-2 control-label">ユーザ名</label>
+						<div class="col-sm-10">
+							<input type="text" id="userName" name="userName"
+								th:field="*{userName}" class="form-control" value="たろう">
+							<span th:if="${#fields.hasErrors('userName')}"
+								th:errors="*{userName}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('useMailF')}? 'has-error has-feedback'">
+						<label for="useMailF" class="col-sm-2 control-label">ユーザ名をメイルアドレスと同一</label>
+						<div class="col-sm-10">
+							<label> <input type="checkbox" id="useMailF"
+								name="useMailF" value="true" th:field="*{useMailF}" /> 同一にする
+							</label>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('mailaddress')}? 'has-error has-feedback'">
+						<label for="mailaddress" class="col-sm-2 control-label">メールアドレス</label>
+						<div class="col-sm-10">
+							<input type="text" id="mailaddress" name="mailaddress"
+								th:field="*{mailaddress}" class="form-control"
+								value="taro@mail.com"> <span
+								th:if="${#fields.hasErrors('mailaddress')}"
+								th:errors="*{mailaddress}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('roleName')}? 'has-error has-feedback'">
+						<label for="roleName" class="col-sm-2 control-label">役割名</label>
+						<div class="col-sm-10">
+							<!-- 							https://qiita.com/alpha_pz/items/e5d1872fbb8f2b3d3f3d  -->
+							<select id="roleId" name="roleId">
+								<option th:each="role : ${selectRole}" th:value="${role.roleId}"
+									th:selected="${role.roleId == personalForm.roleId}"
+									th:inline="text">[[${role.roleName}]]</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('nickName')}? 'has-error has-feedback'">
+						<label for="nickName" class="col-sm-2 control-label">ニックネーム</label>
+
+						<div class="col-sm-10">
+							<input type="text" id="nickName" name="nickName"
+								th:field="*{nickName}" class="form-control" value="でんでん">
+							<span th:if="${#fields.hasErrors('nickName')}"
+								th:errors="*{nickName}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('password')}? 'has-error has-feedback'">
+						<label for="password" class="col-sm-2 control-label">パスワード</label>
+						<div class="col-sm-10">
+							<input type="text" id="password" name="password"
+								th:field="*{password}" class="form-control" value="イベントの場所、日時等">
+							<span th:if="${#fields.hasErrors('password')}"
+								th:errors="*{password}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('delF')}? 'has-error has-feedback'">
+						<label for="delF" class="col-sm-2 control-label">削除の有無</label>
+						<div class="col-sm-10">
+							<label> <input type="checkbox" id="delF" name="delF"
+								value="true" th:field="*{delF}" /> 利用停止
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="submit" class="btn btn-default" name="goToBack"
+								value="戻る"> <input type="hidden" name="id"
+								th:value="${param.id[0]}"> <input th:if="*{id}"
+								type="submit" class="btn btn-primary" name="edit" value="更新">
+							<input th:unless="*{id}" type="submit" class="btn btn-primary"
+								name="create" value="作成">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div th:replace="/CommonPartsForHTML/parts1 :: scriptBasic"></div>
+	<div
+		th:replace="/CommonPartsForHTML/parts1 :: scriptDatepickerForCalendar"></div>
+	<!-- 	カレンダ用 -->
+	<script>
+		$(function() {
+			$("#startDate").datepicker();
+			$("#startDate").datepicker("option", "showOn", 'both');
+
+			$("#endDate").datepicker();
+			$("#endDate").datepicker("option", "showOn", 'both');
+		});
+	</script>
+	<!-- 	カレンダ用 -->
+</body>
+</html>

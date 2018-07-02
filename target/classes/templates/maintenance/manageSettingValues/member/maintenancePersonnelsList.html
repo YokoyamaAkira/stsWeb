@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head lang="en">
+<meta charset="UTF-8">
+<title>メンバー一覧</title>
+<object th:replace="/CommonPartsForHTML/parts1 :: linkBasic"></object>
+</head>
+<body>
+	<div th:replace="/CommonPartsForHTML/parts1 :: naviCopy"></div>
+	<div class="container">
+		<h1>メンバー管理</h1>
+
+		<div class="col-sm-12">
+			<form th:action="@{/maintenance/manageSettingValues/member/create}"
+				class="form-horizontal" method="get">
+				<fieldset>
+					<legend>メンバー新規作成</legend>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-primary" name="new_maintenancePersonnel">作成</button>
+							<input type="hidden" name="id" value="-1">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<hr />
+			<table class="table table-striped table-bordered table-condensed">
+				<tr>
+					<th>ID</th>
+					<th>メンバー名</th>
+					<th>役割名</th>
+					<th>ニックネーム</th>
+					<th colspan="3">編集</th>
+				</tr>
+				<tr th:each="maintenancePersonnel : ${maintenancePersonnels}">
+					<td th:text="${maintenancePersonnel.id}">100</td>
+					<td th:text="${maintenancePersonnel.userName}">taka</td>
+					<td th:text="${maintenancePersonnel.roleName}">role_user</td>
+					<td th:text="${maintenancePersonnel.nickName}">テスト テスト</td>
+					<td>
+						<form
+							th:action="@{/maintenance/manageSettingValues/member/editMaintenancePersonnel}"
+							method="get">
+							<input class="btn btn-default" type="submit" name="form"
+								value="編集"> <input type="hidden" name="id"
+								th:value="${maintenancePersonnel.id}">
+						</form>
+					</td>
+					<td>
+						<form th:action="@{/maintenance/manageSettingValues/member/create}"
+							method="get">
+							<input class="btn btn-primary" type="submit" name="renew_maintenancePersonnel"
+								value="参照新規"> <input type="hidden" name="id"
+								th:value="${maintenancePersonnel.id}">
+						</form>
+					</td>
+					<td>
+						<form th:action="@{/maintenance/manageSettingValues/member/delete}"
+							method="post">
+							<input class="btn btn-danger" type="submit" value="削除"> <input
+								type="hidden" name="id" th:value="${maintenancePersonnel.id}">
+						</form>
+					</td>
+				</tr>
+			</table>
+			<form th:action="@{/maintenance/manageSettingValues/member/maintenancePersonnelsList}"
+				method="post">
+				<input type="submit" class="btn btn-default" name="goToBack"
+					value="戻る">
+			</form>
+		</div>
+	</div>
+	<div th:replace="/CommonPartsForHTML/parts1 :: scriptBasic"></div>
+</body>
+</html>

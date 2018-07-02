@@ -4,93 +4,18 @@
 <head lang="en">
 <meta charset="UTF-8">
 <title>顧客一覧</title>
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}" />
-<link rel="stylesheet" type="text/css" href="/css/navigation.css" />
+<object th:replace="/CommonPartsForHTML/parts1 :: linkBasic"></object>
 </head>
 <body>
-	<nav>
-		<ul id="dropmenu">
-			<li><p>
-					<span sec:authentication="principal.user.username">duke</span>さんログイン中。
-				</p>
-				<ul>
-					<li><form th:action="@{/logout}" method="post">
-							<input type="submit" value="ログアウト">
-						</form></li>
-					<li><form th:action="@{/logout}" method="post">
-							<input type="submit" value="ログアウト">
-						</form></li>
-					<li><form th:action="@{/logout}" method="post">
-							<input type="submit" value="ログアウト">
-						</form></li>
-				</ul></li>
-			<li><a href="http://weboook.blog22.fc2.com/blog-category-4.html">スタイルシート</a>
-				<ul>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-355.html"
-						target="_blank">CSSの基本、小技、テクニック総まとめ</a></li>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-287.html"
-						target="_blank">保存版！CSS3セレクタの説明書</a></li>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-315.html"
-						target="_blank">CSS3を使うにあたって知っておきたいIE対策</a></li>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-318.html"
-						target="_blank">CSS3を使った美しい横メニューの作り方</a></li>
-				</ul></li>
-			<li><a href="http://weboook.blog22.fc2.com/blog-category-8.html">お役立ちサイト</a>
-				<ul>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-275.html"
-						target="_blank">ウェブサイト作成に役立つ35のwebサービス</a></li>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-358.html"
-						target="_blank">配色パターンを決める際に役立つサイト</a></li>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-349.html"
-						target="_blank">ウェブサイト作成の勉強になった日本語スライド</a></li>
-				</ul></li>
-			<li><a href="http://weboook.blog22.fc2.com/blog-category-2.html">JavaScript</a>
-				<ul>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-353.html"
-						target="_blank">スクロールすると上に固定されるメニュー</a></li>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-347.html"
-						target="_blank">jQueryとCSS3を使ったアコーディオンメニュー</a></li>
-				</ul></li>
-			<li><a
-				href="http://weboook.blog22.fc2.com/blog-category-22.html">ウェブデザイン</a>
-				<ul>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-334.html"
-						target="_blank">配色について学べる記事のまとめ</a></li>
-					<li><a
-						href="http://weboook.blog22.fc2.com/blog-entry-309.html"
-						target="_blank">ページタブアプリ(iframe)の作成方法</a></li>
-				</ul></li>
-		</ul>
-	</nav>
+	<div th:replace="/CommonPartsForHTML/parts1 :: naviCopy"></div>
 	<div class="container">
-		<h1>顧客管理システム</h1>
-		<!-- 		<p> -->
-		<!-- 			<span sec:authentication="principal.user.username">duke</span>さんログイン中。 -->
-		<!-- 		</p> -->
-		<!-- 		<form th:action="@{/logout}" method="post"> -->
-		<!-- 			<input type="submit" class="btn btn-default btn-xs" value="ログアウト"> -->
-		<!-- 		</form> -->
+		<h1>イベント管理システム</h1>
 
 		<div class="col-sm-12">
 			<form th:action="@{/maintenance/newsOperation/create}"
 				class="form-horizontal" method="get">
 				<fieldset>
-					<legend>顧客情報作成</legend>
+					<legend>イベント新規作成</legend>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<button type="submit" class="btn btn-primary" name="new_edit">作成</button>
@@ -141,11 +66,6 @@
 			</table>
 		</div>
 	</div>
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
-		th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
-	<script
-		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+	<div th:replace="/CommonPartsForHTML/parts1 :: scriptBasic"></div>
 </body>
 </html>
