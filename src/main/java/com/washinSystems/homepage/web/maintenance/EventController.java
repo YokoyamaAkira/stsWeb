@@ -8,13 +8,17 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import com.washinSystems.homepage.domain.NoticeEvent;
 import com.washinSystems.homepage.service.NoticeEventService;
 import com.washinSystems.homepage.web.LoginUserDetails;
 import com.washinSystems.homepage.web.maintenance.common.StringConstant;
 import com.washinSystems.homepage.web.maintenance.formData.EventForm;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -38,12 +42,8 @@ public class EventController {
 
 	// from listPage to createPage
 	@GetMapping(path = "create", params = "new_edit")
-	String newEvent(@Validated EventForm form, BindingResult result, Model model,
-			@AuthenticationPrincipal LoginUserDetails userDetails) {
-		if (result.hasErrors()) {
-			return list(model);
-		}
-		form.setId(null);//新規作成のためイベントIDを設定しない。これをもって新規作成画面と更新画面を切り替える
+	String newEvent(EventForm form) {
+		form.setId(null);// 新規作成のためイベントIDを設定しない。これをもって新規作成画面と更新画面を切り替える
 		return StringConstant.Absolute_Path_editEvent;
 	}
 
@@ -54,7 +54,7 @@ public class EventController {
 			NoticeEvent noticeEvent = noticeEventService.findOne(id);
 			BeanUtils.copyProperties(noticeEvent, form);
 		}
-		form.setId(null);//新規作成のためイベントIDを設定しない。これをもって新規作成画面と更新画面を切り替える
+		form.setId(null);// 新規作成のためイベントIDを設定しない。これをもって新規作成画面と更新画面を切り替える
 		return StringConstant.Absolute_Path_editEvent;
 	}
 
@@ -65,10 +65,14 @@ public class EventController {
 		if (result.hasErrors()) {
 			return renewEvent(id, form);
 		}
+		String fileName = new File(form.getUploadFile().getOriginalFilename()).getName();
 		NoticeEvent noticeEvent = new NoticeEvent();
 		BeanUtils.copyProperties(form, noticeEvent);
 		noticeEvent.setId(null);
 		noticeEventService.create(noticeEvent, userDetails.getUser());
+		if (form.getUploadF()) {// サブファイルがあるときにアップロードページへ
+			uploadNewsPage(form);
+		}
 		return StringConstant.Redirect_Path_newsOperation;
 	}
 
@@ -90,6 +94,9 @@ public class EventController {
 		NoticeEvent noticeEvent = new NoticeEvent();
 		BeanUtils.copyProperties(form, noticeEvent);
 		noticeEventService.update(noticeEvent, userDetails.getUser());
+		if (form.getUploadF()) {// サブファイルがあるときにアップロードページへ
+			uploadNewsPage(form);
+		}
 		return StringConstant.Redirect_Path_newsOperation;
 	}
 
@@ -98,17 +105,68 @@ public class EventController {
 	String goToTop() {
 		return StringConstant.Redirect_Path_newsOperation;
 	}
-	
+
 	// from workPage to listPage
 	@PostMapping(path = "createEvent", params = StringConstant.Params_goToBack)
 	String goToTop2() {
 		return StringConstant.Redirect_Path_newsOperation;
 	}
 
-	//delete data from listPage
+	// delete data from listPage
 	@PostMapping(path = "delete")
 	String delete(@RequestParam Integer id) {
 		noticeEventService.delete(id);
 		return StringConstant.Redirect_Path_newsOperation;
 	}
+	
+	String uploadNewsPage(EventForm form){
+		// ファイルを一時ホルダに保存する
+		// ファイル種類から決まる値をセットする
+        StringBuffer filePath = new StringBuffer("./uploadfile")//この定数はパラメタ指定してそこから持ってくる
+                                        .append(File.separator).append("tmp");   //ファイルパス
+
+        // アップロードファイルを格納するディレクトリを作成する
+        File uploadDir = mkdirs(filePath);
+
+        try {
+            // アップロードファイルを置く
+        	String fileName = new File(form.getUploadFile().getOriginalFilename()).getName();
+            File uploadFile =
+                    new File(uploadDir.getPath() + File.separator + fileName);
+            byte[] bytes = form.getUploadFile().getBytes();
+            BufferedOutputStream uploadFileStream =
+                    new BufferedOutputStream(new FileOutputStream(uploadFile));
+            uploadFileStream.write(bytes);
+            uploadFileStream.close();
+        } catch (Exception e) {
+            // 異常終了時の処理
+        } catch (Throwable t) {
+            // 異常終了時の処理
+        }
+		return null;
+	}
+	
+  /**
+  * アップロードファイルを格納するディレクトリを作成する
+  *
+  * @param filePath
+  * @return
+  */
+ private File mkdirs(StringBuffer filePath){
+     Date now = new Date();
+     SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+     File uploadDir = new File(filePath.toString(), sdf.format(now));
+     // 既に存在する場合はプレフィックスをつける
+     int prefix = 0;
+     while(uploadDir.exists()){
+         prefix++;
+         uploadDir =
+                 new File(filePath.toString() + sdf.format(now) + "-" + String.valueOf(prefix));
+     }
+
+     // フォルダ作成
+     uploadDir.mkdirs();
+
+     return uploadDir;
+ }
 }

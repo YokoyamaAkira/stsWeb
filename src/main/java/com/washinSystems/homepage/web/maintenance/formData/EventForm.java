@@ -5,6 +5,9 @@ import java.util.Date;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.washinSystems.homepage.localValidator.FileRequired;
 
 import lombok.Data;
 
@@ -22,4 +25,7 @@ public class EventForm {
 	@Size(min = 1, max = 100)
 	private String eventContents;// 	VARCHAR(100) DEFAULT '',
     private Boolean postingEndF;// 		BOOLEAN DEFAULT false,
+    private Boolean uploadF;//			今回アップロードするかのフラグ
+    //@FileRequired
+    private MultipartFile uploadFile;
 }

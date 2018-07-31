@@ -13,7 +13,7 @@
 	<div class="container">
 		<h1>イベント管理</h1>
 		<div class="col-sm-12">
-			<form th:action="@{/maintenance/newsOperation/eventEdit}"
+			<form th:action="@{/maintenance/newsOperation/eventEdit}"  enctype="multipart/form-data" 
 				th:object="${eventForm}" class="form-horizontal" method="post">
 				<fieldset>
 				<div th:if="*{id}" >
@@ -85,6 +85,30 @@
 								th:if="${#fields.hasErrors('eventContents')}"
 								th:errors="*{eventContents}" class="help-block">error!</span>
 						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('uploadFile')}? 'has-error has-feedback'">
+						<label for="uploadFile" class="col-sm-2 control-label">詳細：リンク先</label>
+
+						<div class="col-sm-10">
+							<input type="file" id="uploadFile" name="uploadFile"
+								th:field="*{uploadFile}" class="form-control"
+								value="イベントの場所、日時等"> <span
+								th:if="${#fields.hasErrors('uploadFile')}"
+								th:errors="*{uploadFile}" class="help-block">error!</span>
+						</div>
+					</div>
+					<div class="form-group"
+						th:classappend="${#fields.hasErrors('uploadF')}? 'has-error has-feedback'">
+						<label for="uploadF" class="col-sm-2 control-label">サブページのアップロードの有無</label>
+						<div class="col-sm-10">
+							<label> <input type="checkbox" id="uploadF"
+								name="uploadF" value="true" th:field="*{uploadF}" />
+								アップロードする
+							</label>
+						</div>
+						<span th:if="${#fields.hasErrors('uploadF')}"
+							th:errors="*{uploadF}" class="help-block">error!</span>
 					</div>
 					<div class="form-group"
 						th:classappend="${#fields.hasErrors('postingEndF')}? 'has-error has-feedback'">

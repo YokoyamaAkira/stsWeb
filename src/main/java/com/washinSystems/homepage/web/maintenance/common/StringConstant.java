@@ -7,6 +7,8 @@ public class StringConstant {
 	
 	public static final String Absolute_Path_editEvent = "maintenance/newsOperation/editEvent";
 	
+	public static final String Absolute_Path_uploadNewsPage = "maintenance/newsOperation/uploadNewsPage";
+	
 	public static final String Absolute_Path_rolesList = "maintenance/manageSettingValues/code/rolesList";
 	
 	public static final String Absolute_Path_editRole = "maintenance/manageSettingValues/code/editRole";
