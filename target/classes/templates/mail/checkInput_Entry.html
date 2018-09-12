@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head lang="ja">
+<meta charset="UTF-8">
+<meta name="description" content="和心システムホームページです。プログラマー、システムエンジニア募集中です。">
+<meta name="keywords"
+	content="和心,和心システム,電子書店,システム,情報処理,システムエンジニア,SE,プログラマ,プログラマー,本屋でござ～る,本屋,ござーる">
+<title>和心システム株式会社</title>
+<link rel="stylesheet" href="../data/css/header.css" />
+<link rel="stylesheet" href="../data/css/footer.css" />
+<link rel="stylesheet" href="../data/css/under_under.css" />
+
+<!--[if lt IE 8]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/iepp.1-6-2.js"></script>
+<![endif]-->
+
+</head>
+<body>
+	<header>
+		<div id="header">
+			<ul>
+				<li class="h_btn1"><a href="../data/member.html">社員専用</a></li>
+			</ul>
+			<hgroup>
+				<p>
+					<a href="/">和心システム │ 人と技術を大切にすることで、お客様の要請にお応えします！</a>
+				</p>
+			</hgroup>
+		</div>
+	</header>
+	<nav>
+		<div id="nav">
+			<ul>
+				<li class="nav1"><a href="/">トップページ</a></li>
+				<li class="nav2"><a href="../data/company.html">会社案内</a></li>
+				<li class="nav3"><a href="../data/service.html">事業内容</a></li>
+				<li class="nav4"><a href="../data/works.html">開発実績</a></li>
+				<li class="nav6"><a href="../data/kiyaku_contact.html">お問い合わせ</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="wrapper" class="drop-shadow">
+		<section>
+			<div id="section">
+				<article>
+					<div class="kami">
+						<a href="/">TOP</a> > <a href="../data/recruit.html">採用情報</a> > <a
+							href="../data/recruit3.html">新卒募集要項</a> > エントリー
+					</div>
+					<h1>
+						<img src="../data/img/recruit_title2.jpg" width="620" height="58"
+							alt="エントリー" />
+					</h1>
+					<form method="post" th:action="@{./sendEntry}"
+						enctype="multipart/form-data" th:object="${entryMailForm}">
+						<table border="0" cellspacing="0" cellpadding="0" width="620"
+							id="fix">
+							<tr>
+								<td align="right">採用<b><font color="red">(※必須)</font></b></td>
+								<td class="non" th:text="${entryMailForm.graduate}">新卒</td>
+							</tr>
+							<tr>
+								<td align="right">お名前<b><font color="red">(※必須)</font></b></td>
+								<td class="non"
+									th:text="${entryMailForm.lastName} + '&nbsp' + ${entryMailForm.firstName}">あ
+									い</td>
+							</tr>
+							<tr>
+								<td align="right">ふりがな<b><font color="red">(※必須)</font></b></td>
+								<td class="non"
+									th:text="${entryMailForm.kanaLastName} + '&nbsp' + ${entryMailForm.kanaFirstName}">あ</td>
+							</tr>
+							<tr>
+								<td align="right">生年月日<b><font color="red">(※必須)</font></b></td>
+								<td class="non"
+									th:text="${entryMailForm.birthdayY} +'&nbsp;&frasl;&nbsp'+ ${entryMailForm.birthdayM} +'&nbsp;&frasl;&nbsp'+ ${entryMailForm.birthdayD}">2003/
+									5/ 5</td>
+							</tr>
+							<tr>
+								<td align="right">卒業または卒業見込<b><font color="red">(※必須)</font></b></td>
+								<td class="non"
+									th:text="${entryMailForm.graduateY} +'&nbsp;&frasl;&nbsp'+ ${entryMailForm.graduateM} +'&nbsp;&frasl;&nbsp'+ ${entryMailForm.graduateD}">2019/
+									3/ 31</td>
+							</tr>
+							<tr>
+								<td align="right">郵便番号<b><font color="red">(※必須)</font></b></td>
+								<td class="non" th:text="${entryMailForm.postalCode}">2530032</td>
+							</tr>
+							<tr>
+								<td align="right" rowspan="3">ご住所<b><font color="red">(※必須)</font></b></td>
+								<td class="non" th:text="${entryMailForm.prefectures}">富山県</td>
+							</tr>
+							<tr>
+								<td class="non" th:text="${entryMailForm.municipality}">お</td>
+							</tr>
+							<tr>
+								<td class="non" th:text="${entryMailForm.buildingName}">が</td>
+							<tr>
+								<td rowspan="2" align="right" class="no">電話番号<b><font
+										color="red">(※必須)</font></b><br> <span
+									style="font-size: 11px">※自宅電話か携帯電話のどちらかを<br>必ず入力してください。
+								</span></td>
+								<td th:text="${entryMailForm.tel}">03123456</td>
+							</tr>
+							<tr>
+								<td th:text="${entryMailForm.mobile}">6543210</td>
+							</tr>
+							<tr>
+								<td align="right">メールアドレス</td>
+								<td class="non" th:text="${entryMailForm.mailAddress}">'test@washin.co.jp'</td>
+							</tr>
+							<tr>
+								<td align="right">送信有無</td>
+								<td align="left" class="non"><INPUT type="submit"
+									value="送信" /> <INPUT type="submit" name="goToBack"
+									value="戻る" /></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center" class="nonnonnon">上記の内容で問題なければ「送信」ボタンをクリックしてください。</td>
+							</tr>
+						</table>
+						<input type="hidden" name="graduate" th:value="${entryMailForm.graduate}"/>
+						<input type="hidden" name="lastName" th:value="${entryMailForm.lastName}"/>
+						<input type="hidden" name="firstName" th:value="${entryMailForm.firstName}"/>
+						<input type="hidden" name="kanaLastName" th:value="${entryMailForm.kanaLastName}"/>
+						<input type="hidden" name="kanaFirstName" th:value="${entryMailForm.kanaFirstName}"/>
+						<input type="hidden" name="birthdayY" th:value="${entryMailForm.birthdayY}"/>
+						<input type="hidden" name="birthdayM" th:value="${entryMailForm.birthdayM}"/>
+						<input type="hidden" name="birthdayD" th:value="${entryMailForm.birthdayD}"/>
+						<input type="hidden" name="graduateY" th:value="${entryMailForm.graduateY}"/>
+						<input type="hidden" name="graduateM" th:value="${entryMailForm.graduateM}"/>
+						<input type="hidden" name="graduateD" th:value="${entryMailForm.graduateD}"/>
+						<input type="hidden" name="postalCode" th:value="${entryMailForm.postalCode}"/>
+						<input type="hidden" name="prefectures" th:value="${entryMailForm.prefectures}"/>
+						<input type="hidden" name="municipality" th:value="${entryMailForm.municipality}"/>
+						<input type="hidden" name="buildingName" th:value="${entryMailForm.buildingName}"/>
+						<input type="hidden" name="tel" th:value="${entryMailForm.tel}"/>
+						<input type="hidden" name="mobile" th:value="${entryMailForm.mobile}"/>
+						<input type="hidden" name="mailAddress" th:value="${entryMailForm.mailAddress}"/>
+					</form>
+					<!--メールフォーム-->
+				</article>
+			</div>
+		</section>
+		<aside id="aside">
+			<div id="aside">
+				<div class="recruitx_menu">
+					<ul>
+						<li><a href="recruit1.html">和心イズム</a></li>
+						<li>■エントリー</li>
+						<li><a href="recruit3.html">新卒募集要項</a></li>
+						<li><a href="recruit4.html">中途募集要項</a></li>
+						<li><a href="recruit5.html">先輩からのメッセージ</a></li>
+						<li><a href="recruit7.html">組織図</a></li>
+						<li class="last"><a href="recruit6.html">入社後のフォロー</a></li>
+					</ul>
+				</div>
+				<h5>
+					<a href="flow.html">システム開発の流れ 見積もりからご契約、ご納品までの流れの相談はコチラ</a>
+				</h5>
+				<h6>
+					<a href="recruit.html">採用情報はこちら</a>
+				</h6>
+			</div>
+		</aside>
+	</div>
+	<!--END WRAPPER-->
+	<footer>
+		<div id="footer">
+			<div class="foot">
+				<div class="foot_left">
+					<p>和心システム〒105-0004 東京都港区新橋2-19-2リプロ新橋8F TEL 03-3572-2488 FAX
+						03-5568-7627</p>
+				</div>
+				<div class="foot_right">
+					<p>
+						<a href="privacy.html">プライバシーポリシーはコチラ</a>
+					</p>
+				</div>
+			</div>
+			<p class="copyright">COPYRIGHT (c) Washin Systems Co.,Ltd. All
+				Rights Reserved</p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -146,7 +146,7 @@
   
 <div class="yesno">
 <div id="pram1"></div>
-<!-- <a href="https://localhost/washin_home/contact.php">［同意する］</a>　<a href="javascript:window.history.back();" title="一つ前のページへ戻る">［同意しない］</a>  -->
+<!-- <a href="../mail/contact.html">［同意する］</a>　<a href="javascript:window.history.back();" title="一つ前のページへ戻る">［同意しない］</a>  -->
 </div>
     </article>
 </div>
@@ -173,14 +173,14 @@ if(urlParam) {
   // パラメータidがosakaかどうかを判断する
   if (paramArray.id == 'flow') {
 	  document.getElementById("pram").innerHTML = '<div class="kami"><a href="/">TOP</a> > <a href="./flow.html">システム開発の流れ</a> > お問い合わせ</div>';
-	  document.getElementById("pram1").innerHTML = '<a href="https://localhost/washin_home/contactfromflow.php">［同意する］</a> <a href="javascript:window.history.back();" title="一つ前のページへ戻る">［同意しない］</a>';
+	  document.getElementById("pram1").innerHTML = '<a href="../mail/contact.html">［同意する］</a> <a href="javascript:window.history.back();" title="一つ前のページへ戻る">［同意しない］</a>';
   } else {
 	  document.getElementById("pram").innerHTML = '<div class="kami"><a href="/">TOP</a> > お問い合わせ</div>';
-	  document.getElementById("pram1").innerHTML = '<a href="https://localhost/washin_home/contact.php">［同意する］</a> <a href="javascript:window.history.back();" title="一つ前のページへ戻る">［同意しない］</a>';
+	  document.getElementById("pram1").innerHTML = '<a href="../mail/contact.html">［同意する］</a> <a href="javascript:window.history.back();" title="一つ前のページへ戻る">［同意しない］</a>';
   }
 } else {
 	document.getElementById("pram").innerHTML = '<div class="kami"><a href="/">TOP</a> > お問い合わせ</div>';
-	document.getElementById("pram1").innerHTML = '<a href="https://localhost/washin_home/contact.php">［同意する］</a> <a href="javascript:window.history.back();" title="一つ前のページへ戻る">［同意しない］</a>';
+	document.getElementById("pram1").innerHTML = '<a href="../mail/contact.html">［同意する］</a> <a href="javascript:window.history.back();" title="一つ前のページへ戻る">［同意しない］</a>';
 }
 </script>
 

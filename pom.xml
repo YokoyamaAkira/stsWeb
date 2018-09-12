@@ -115,8 +115,17 @@
 			<groupId>org.dbunit</groupId>
 			<artifactId>dbunit</artifactId>
 			<version>2.5.4</version>
-<!-- 			<scope>test</scope> -->
+			<!-- <scope>test</scope> -->
 		</dependency>
+
+<!-- for mail -->
+<!-- 2018/09/07:https://www.saka-en.com/java/spring-boot-email-send/ -->
+<!-- 2018/09/07:https://dev.classmethod.jp/server-side/java/java-spring-boot-mail-send/ -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+<!-- for mail -->
 	</dependencies>
 	<!-- 20180325 end -->
 	<build>

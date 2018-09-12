@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import com.washinSystems.homepage.domain.NoticeEvent;
 import com.washinSystems.homepage.service.NoticeEventService;
 import com.washinSystems.homepage.web.LoginUserDetails;
+import com.washinSystems.homepage.web.maintenance.common.IntegerConstant;
 import com.washinSystems.homepage.web.maintenance.common.StringConstant;
 import com.washinSystems.homepage.web.maintenance.formData.EventForm;
 
@@ -59,11 +60,11 @@ public class EventController {
 	}
 
 	// insert data to DB
-	@PostMapping(path = "eventEdit", params = "create")
-	String create(@RequestParam Integer id, @Validated EventForm form, BindingResult result,
+	@PostMapping(path = "eventEdit", params = StringConstant.Params_create/*"create"*/)
+	String create(@Validated EventForm form, BindingResult result,
 			@AuthenticationPrincipal LoginUserDetails userDetails) {
 		if (result.hasErrors()) {
-			return renewEvent(id, form);
+			return renewEvent(IntegerConstant.Params_Non, form);
 		}
 		String fileName = new File(form.getUploadFile().getOriginalFilename()).getName();
 		NoticeEvent noticeEvent = new NoticeEvent();
@@ -86,10 +87,10 @@ public class EventController {
 
 	// update data to DB
 	@PostMapping(path = "eventEdit", params = "edit")
-	String edit(@RequestParam Integer id, @Validated EventForm form, BindingResult result,
+	String edit(@Validated EventForm form, BindingResult result,
 			@AuthenticationPrincipal LoginUserDetails userDetails) {
 		if (result.hasErrors()) {
-			return editForm(id, form);
+			return editForm(form.getId(), form);
 		}
 		NoticeEvent noticeEvent = new NoticeEvent();
 		BeanUtils.copyProperties(form, noticeEvent);
@@ -118,55 +119,52 @@ public class EventController {
 		noticeEventService.delete(id);
 		return StringConstant.Redirect_Path_newsOperation;
 	}
-	
-	String uploadNewsPage(EventForm form){
+
+	String uploadNewsPage(EventForm form) {
 		// ファイルを一時ホルダに保存する
 		// ファイル種類から決まる値をセットする
-        StringBuffer filePath = new StringBuffer("./uploadfile")//この定数はパラメタ指定してそこから持ってくる
-                                        .append(File.separator).append("tmp");   //ファイルパス
+		StringBuffer filePath = new StringBuffer("./uploadfile")// この定数はパラメタ指定してそこから持ってくる
+				.append(File.separator).append("tmp"); // ファイルパス
 
-        // アップロードファイルを格納するディレクトリを作成する
-        File uploadDir = mkdirs(filePath);
+		// アップロードファイルを格納するディレクトリを作成する
+		File uploadDir = mkdirs(filePath);
 
-        try {
-            // アップロードファイルを置く
-        	String fileName = new File(form.getUploadFile().getOriginalFilename()).getName();
-            File uploadFile =
-                    new File(uploadDir.getPath() + File.separator + fileName);
-            byte[] bytes = form.getUploadFile().getBytes();
-            BufferedOutputStream uploadFileStream =
-                    new BufferedOutputStream(new FileOutputStream(uploadFile));
-            uploadFileStream.write(bytes);
-            uploadFileStream.close();
-        } catch (Exception e) {
-            // 異常終了時の処理
-        } catch (Throwable t) {
-            // 異常終了時の処理
-        }
+		try {
+			// アップロードファイルを置く
+			String fileName = new File(form.getUploadFile().getOriginalFilename()).getName();
+			File uploadFile = new File(uploadDir.getPath() + File.separator + fileName);
+			byte[] bytes = form.getUploadFile().getBytes();
+			BufferedOutputStream uploadFileStream = new BufferedOutputStream(new FileOutputStream(uploadFile));
+			uploadFileStream.write(bytes);
+			uploadFileStream.close();
+		} catch (Exception e) {
+			// 異常終了時の処理
+		} catch (Throwable t) {
+			// 異常終了時の処理
+		}
 		return null;
 	}
-	
-  /**
-  * アップロードファイルを格納するディレクトリを作成する
-  *
-  * @param filePath
-  * @return
-  */
- private File mkdirs(StringBuffer filePath){
-     Date now = new Date();
-     SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
-     File uploadDir = new File(filePath.toString(), sdf.format(now));
-     // 既に存在する場合はプレフィックスをつける
-     int prefix = 0;
-     while(uploadDir.exists()){
-         prefix++;
-         uploadDir =
-                 new File(filePath.toString() + sdf.format(now) + "-" + String.valueOf(prefix));
-     }
 
-     // フォルダ作成
-     uploadDir.mkdirs();
+	/**
+	 * アップロードファイルを格納するディレクトリを作成する
+	 *
+	 * @param filePath
+	 * @return
+	 */
+	private File mkdirs(StringBuffer filePath) {
+		Date now = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+		File uploadDir = new File(filePath.toString(), sdf.format(now));
+		// 既に存在する場合はプレフィックスをつける
+		int prefix = 0;
+		while (uploadDir.exists()) {
+			prefix++;
+			uploadDir = new File(filePath.toString() + sdf.format(now) + "-" + String.valueOf(prefix));
+		}
 
-     return uploadDir;
- }
+		// フォルダ作成
+		uploadDir.mkdirs();
+
+		return uploadDir;
+	}
 }
