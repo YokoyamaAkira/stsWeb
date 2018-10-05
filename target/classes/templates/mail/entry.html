@@ -428,6 +428,16 @@
 								</td>
 							</tr>
 							<tr>
+								<td th:if="${#fields.hasErrors('tel')}"></td>
+								<td th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"
+									style="color: red"></td>
+							</tr>
+							<tr>
+								<td th:if="${#fields.hasErrors('mobile')}"></td>
+								<td th:if="${#fields.hasErrors('mobile')}" th:errors="*{mobile}"
+									style="color: red"></td>
+							</tr>
+							<tr>
 								<td align="right">メールアドレス</td>
 								<td class="non"><input type="text" id="mailAddress"
 									name="mailAddress" size="30" style="ime-mode: disabled"

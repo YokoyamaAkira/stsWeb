@@ -9,25 +9,25 @@ import lombok.Data;
 
 @Data
 public class ContactMailForm {
-	@NotEmpty
-	@Email
+	@NotEmpty(message="メールアドレス：記入してください")
+	@Email(message="メールアドレス：メールアドレスの形式で記入してください")
 	private String mailAddress;
-	@NotEmpty
-	@Pattern(regexp = "^[^ -~｡-ﾟ]*$")
+	@NotEmpty(message="氏：記入してください")
+	@Pattern(regexp = "^[^ -~｡-ﾟ]*$",message="氏：全角で記入")
 	private String lastName;
-	@NotEmpty
-	@Pattern(regexp = "^[^ -~｡-ﾟ]*$")
+	@NotEmpty(message="名：記入してください")
+	@Pattern(regexp = "^[^ -~｡-ﾟ]*$",message="名：全角で記入")
 	private String firstName;
-	@NotEmpty
-	@Pattern(regexp = "^[ぁ-ん]*$")
+	@NotEmpty(message="し：記入してください")
+	@Pattern(regexp = "^[ぁ-ん]*$",message="し：全角ひらがなで記入")
 	private String kanaLastName;
-	@NotEmpty
-	@Pattern(regexp = "^[ぁ-ん]*$")
+	@NotEmpty(message="めい：記入してください")
+	@Pattern(regexp = "^[ぁ-ん]*$",message="めい：全角ひらがなで記入")
 	private String kanaFirstName;
-	@NotEmpty
+	@NotEmpty(message="項目：選択してください")
 	private String questionItem;
 	private Integer questionItemID;
-	@NotEmpty
+	@NotEmpty(message="質問内容：記入してください")
 	private String contentsQuestion;
 	private String contentsQuestionForHTML;
 }
