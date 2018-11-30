@@ -1,5 +1,11 @@
 package com.washinSystems.homepage.web.mail;
 
+import java.util.Date;
+import java.sql.Timestamp;
+
+import javax.servlet.ServletRequest;
+
+import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -56,7 +62,9 @@ public class MailController {
 	}
 
 	@PostMapping(path = "sendEntry")
-	String sendEntryForm(EntryMailForm form) {
+	String sendEntryForm(EntryMailForm form,HttpServletRequest request) {
+		form.setIpV4(getRemoteAddr(request));
+        form.setSendTime(getTimestamp());
 		emailService.send(form);
 		return "mail/thanks";
 	}
@@ -101,7 +109,9 @@ public class MailController {
 	}
 
 	@PostMapping(path = "sendContact")
-	String sendEntryForm(ContactMailForm form) {
+	String sendEntryForm(ContactMailForm form ,HttpServletRequest request) {
+		form.setIpV4(getRemoteAddr(request));
+        form.setSendTime(getTimestamp());
 		emailService.send(form);
 		return "mail/thanks2";
 	}
@@ -118,5 +128,24 @@ public class MailController {
 			form.setQuestionItemID(0);
 		}
 		return "/mail/contact";
+	}
+	
+	private String getRemoteAddr(ServletRequest request) {
+	    String xForwardedFor = ((HttpServletRequest) request)
+	                                  .getHeader("X-Forwarded-For");
+	    if (xForwardedFor != null) return xForwardedFor;
+	    return request.getRemoteAddr();
+	}
+	
+	private Timestamp getTimestamp() {
+		Date date = new Date();
+        long time = date.getTime();
+	    return new Timestamp(time);
+	}
+	
+	private String getRemoteAddr(HttpServletRequest request) {
+	    String xForwardedFor = request.getHeader("X-Forwarded-For");
+	    if (xForwardedFor != null) return xForwardedFor;
+	    return request.getRemoteAddr();
 	}
 }

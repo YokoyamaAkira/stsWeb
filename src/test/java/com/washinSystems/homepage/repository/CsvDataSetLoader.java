@@ -1,13 +1,13 @@
 package com.washinSystems.homepage.repository;
 
-import org.dbunit.dataset.IDataSet;
-import org.dbunit.dataset.csv.CsvURLDataSet;
-import org.springframework.core.io.Resource;
+//import org.dbunit.dataset.IDataSet;
+//import org.dbunit.dataset.csv.CsvURLDataSet;
+//import org.springframework.core.io.Resource;
 
-import com.github.springtestdbunit.dataset.AbstractDataSetLoader;
+//import com.github.springtestdbunit.dataset.AbstractDataSetLoader;
 
 //AbstractDataSetLoaderクラスを継承する
-public class CsvDataSetLoader extends AbstractDataSetLoader {
+/*public class CsvDataSetLoader extends AbstractDataSetLoader {
 
 	//標準のxml形式からcsv形式のフォーマットを読み込む設定に変更（override）する
 	@Override
@@ -15,4 +15,4 @@ public class CsvDataSetLoader extends AbstractDataSetLoader {
 		// TODO 自動生成されたメソッド・スタブ
 		return new CsvURLDataSet(resource.getURL());
 	}
-}
+}*/

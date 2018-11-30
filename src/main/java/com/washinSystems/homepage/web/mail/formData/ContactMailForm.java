@@ -1,5 +1,7 @@
 package com.washinSystems.homepage.web.mail.formData;
 
+import java.sql.Timestamp;
+
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
@@ -30,4 +32,6 @@ public class ContactMailForm {
 	@NotEmpty(message="質問内容：記入してください")
 	private String contentsQuestion;
 	private String contentsQuestionForHTML;
+	private String ipV4;
+	private Timestamp sendTime;
 }

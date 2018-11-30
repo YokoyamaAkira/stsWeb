@@ -1,5 +1,7 @@
 package com.washinSystems.homepage.web.mail.formData;
 
+import java.sql.Timestamp;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
@@ -72,4 +74,6 @@ public class EntryMailForm {
 	@NotEmpty(message="メールアドレス：記入してください")
 	@Email(message="メールアドレスの形式で記入してください")
 	private String mailAddress;
+	private String ipV4;
+	private Timestamp sendTime;
 }
